@@ -1,11 +1,10 @@
 import './App.css';
+import Jumbotron from "./components/Jumbotron.js"
 
 function App() {
   return (
     <div className="App">
-      <div className="jumbotron">
-        Beasley's Scents
-      </div>
+      <Jumbotron />
     </div>
   );
 }
