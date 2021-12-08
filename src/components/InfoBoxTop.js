@@ -11,11 +11,12 @@ const InfoBoxTop = () => {
       <div className="infoBoxTopTextContainer">
         <div style={{fontSize: "60px"}}>
           Hand-crafted &amp; poured
+          <div style={{fontSize: "20px"}}>
+            Made with fair trade ingredients
+          </div>
         </div>
 
-        <div>
-          Made with fair trade ingredients
-        </div>
+   
       </div>
     </div>
   )

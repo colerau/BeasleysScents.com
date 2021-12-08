@@ -88,3 +88,7 @@
   font-family: 'Quicksand', sans-serif;
   padding-left: 20px;
 }
+
+.textCenter {
+  text-align: center;
+}
