@@ -43,3 +43,18 @@
   font-family: 'Sacramento', sans-serif;
   font-size: 70px;
 }
+
+.navbar {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 17px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #fff0db;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 12px;
+  margin: auto;
+  width: 80%;
+}
