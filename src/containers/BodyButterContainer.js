@@ -8,6 +8,12 @@ const AllProducts = () => {
   return(
     <div className="allProductsContainer">
       <ProductCard image={lavender} type={"Body Butter"}/>
+      <ProductCard image={sweetOrangeMango} type={"Sweet Orange"} typeOverflow={"Mango"}/>
+      <ProductCard image={grapefruitAndOrange} type={"Grapefruit"} typeOverflow={"& Orange"} orientation={"landscape"}/>
+      <ProductCard />
+      <ProductCard />
+      <ProductCard />
+
     </div>
   )
 }
