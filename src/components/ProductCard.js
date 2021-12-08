@@ -10,6 +10,9 @@ const ProductCard = (props) => {
       <div style={{textAlign: "center"}} className="quicksand productTypeText">
         {props.type}
       </div>
+      <div style={{textAlign: "center"}} className="quicksand productTypeText">
+        {props.typeOverflow}
+      </div>
     </div>
   )
 }
