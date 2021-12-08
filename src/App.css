@@ -125,6 +125,11 @@
   width: 100%;
 }
 
+.productCardImageLandscape {
+  height: 100%;
+  width: auto;
+}
+
 .quicksand {
   font-family: 'Quicksand', sans-serif;
 }

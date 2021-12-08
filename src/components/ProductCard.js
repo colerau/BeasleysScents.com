@@ -4,8 +4,7 @@ const ProductCard = (props) => {
   return(
     <div>
       <div class="productCard">
-        <img className="productCardImage" src={props.image} alt="Body Butter"></img>
-  
+        <img className={props.orientation === "landscape" ? "productCardImageLandscape" : "productCardImage"} src={props.image} alt="Body Butter"></img>
       </div>
       <div style={{textAlign: "center"}} className="quicksand productTypeText">
         {props.type}
