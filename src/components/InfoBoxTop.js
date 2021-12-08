@@ -8,8 +8,14 @@ const InfoBoxTop = () => {
         <img src={fallCollectionImage} alt="" className="infoBoxTopImage"></img>
       </div>
 
-      <div>
-        right
+      <div className="infoBoxTopTextContainer">
+        <div style={{fontSize: "60px"}}>
+          Hand-crafted &amp; poured
+        </div>
+
+        <div>
+          Made with fair trade ingredients
+        </div>
       </div>
     </div>
   )
