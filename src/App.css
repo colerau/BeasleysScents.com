@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+
+.jumbotron {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-family: 'Sacramento', sans-serif;
+  font-size: 70px;
+}
