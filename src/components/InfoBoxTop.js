@@ -1,5 +1,5 @@
 import React, {useState} from "react"
-import fallCollectionImage from "../photos/fall-collection.jpg"
+import fallCollectionImage from "../photos/homePage/fall-collection.jpg"
 
 const InfoBoxTop = () => {
   return(
