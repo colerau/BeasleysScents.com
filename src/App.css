@@ -58,3 +58,22 @@
   margin: auto;
   width: 80%;
 }
+
+.infoBoxTopContainer {
+  display: flex;
+  flex-direction: row;
+  padding-top: 30px;
+}
+
+.infoBoxTopImage {
+  width: 85%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.infoBoxTopImageContainer {
+  display: flex;
+  width: 50%;
+  justify-content: flex-end;
+  align-items: center;
+}
