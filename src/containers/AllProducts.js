@@ -4,17 +4,18 @@ import lavender from "../photos/bodyButter/lavender.JPG"
 import Jumbotron from "../components/Jumbotron.js"
 import Navbar from "../components/Navbar.js"
 import Footer from "../components/Footer.js"
+import { Link } from "react-router-dom";
 
 const AllProducts = () => {
   return(
     <div>
       <Jumbotron />
       <Navbar />
-      <div className="allProductsHeader">
+      <div className="header">
         All Products
       </div>
       <div className="allProductsContainer">
-        <ProductCard image={lavender} type={"Body Butter"}/>
+        <Link to="/body-butter" style={{color: "black"}}><ProductCard image={lavender} type={"Body Butter"}/></Link>
       </div>
       <Footer />
     </div>

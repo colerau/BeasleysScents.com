@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { render } from "react-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AllProducts from "./containers/AllProducts.js";
+import BodyButterContainer from "./containers/BodyButterContainer.js";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -13,6 +14,7 @@ ReactDOM.render(
       <Routes>
       <Route path="/" element={<App />} />
       <Route path="all-products" element={<AllProducts />} />
+      <Route path="body-butter" element={<BodyButterContainer />} />
     </Routes>
     </BrowserRouter>
   </React.StrictMode>,
