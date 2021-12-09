@@ -11,7 +11,7 @@ const InfoBoxTop = () => {
       <div className="infoBoxTopTextContainer">
         <div style={{fontSize: "60px"}}>
           Hand-crafted &amp; poured
-          <div style={{fontSize: "20px"}} class="textCenter">
+          <div style={{fontSize: "20px"}} className="textCenter">
             Made with fair trade ingredients
           </div>
         </div>
