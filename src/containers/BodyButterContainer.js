@@ -7,11 +7,7 @@ import Jumbotron from "../components/Jumbotron.js"
 import Navbar from "../components/Navbar.js"
 import Footer from "../components/Footer.js"
 
-const AllProducts = () => {
-
-  const handleClick = (type) => {
-    console.log(`clicked ${type}`)
-  }
+const BodyButterContainer = props => {
 
   return(
     <div>
@@ -21,9 +17,9 @@ const AllProducts = () => {
         Body Butter
       </div>
       <div className="allProductsContainer">
-        <ProductCard image={lavender} type={"Lavender"}/>
-        <ProductCard image={sweetOrangeMango} type={"Sweet Orange"} typeOverflow={"Mango"}/>
-        <ProductCard image={grapefruitAndOrange} type={"Grapefruit"} typeOverflow={"& Orange"} orientation={"landscape"}/>
+        <ProductCard image={lavender} category={props.category} type={"Lavender"}/>
+        <ProductCard image={sweetOrangeMango} category={props.category} type={"Sweet Orange"} typeOverflow={"Mango"}/>
+        <ProductCard image={grapefruitAndOrange} category={props.category} type={"Grapefruit"} typeOverflow={"& Orange"} orientation={"landscape"}/>
         <ProductCard />
         <ProductCard />
         <ProductCard />
@@ -33,4 +29,4 @@ const AllProducts = () => {
   )
 }
 
-export default AllProducts
+export default BodyButterContainer

@@ -14,7 +14,7 @@ ReactDOM.render(
       <Routes>
       <Route path="/" element={<App />} />
       <Route path="all-products" element={<AllProducts />} />
-      <Route path="body-butter" element={<BodyButterContainer />} />
+      <Route path="body-butter" element={<BodyButterContainer category="Body Butter"/>} />
     </Routes>
     </BrowserRouter>
   </React.StrictMode>,

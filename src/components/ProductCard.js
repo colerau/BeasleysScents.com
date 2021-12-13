@@ -3,7 +3,7 @@ import React, {useState} from "react"
 const ProductCard = (props) => {
 
   const handleClick = () => {
-    console.log(`clicked ${props.type}`)
+    console.log(`clicked ${props.category} - ${props.type}`)
   }
 
   return(
@@ -17,7 +17,8 @@ const ProductCard = (props) => {
       <div style={{textAlign: "center"}} className="quicksand productTypeText">
         {props.typeOverflow}
       </div>
-      <button id="productCardButton" onClick={handleClick}>Purchase via Square</button>
+
+      {props.noPurchaseButton === true ? <></> : <button id="productCardButton" onClick={handleClick}>Purchase via Square</button>}
     </div>
   )
 }

@@ -15,7 +15,7 @@ const AllProducts = () => {
         All Products
       </div>
       <div className="allProductsContainer">
-        <Link to="/body-butter" style={{color: "black"}}><ProductCard image={lavender} type={"Body Butter"}/></Link>
+        <Link to="/body-butter" style={{color: "black"}}><ProductCard noPurchaseButton={true} image={lavender} type={"Body Butter"}/></Link>
       </div>
       <Footer />
     </div>
