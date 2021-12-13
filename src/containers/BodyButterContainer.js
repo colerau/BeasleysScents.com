@@ -8,6 +8,11 @@ import Navbar from "../components/Navbar.js"
 import Footer from "../components/Footer.js"
 
 const AllProducts = () => {
+
+  const handleClick = (type) => {
+    console.log(`clicked ${type}`)
+  }
+
   return(
     <div>
       <Jumbotron />
