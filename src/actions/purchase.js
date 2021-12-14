@@ -1,3 +1,5 @@
+import axios from 'axios'
+
 export const purchase = (category, type) => {
-  console.log(`purchasing ${category}, ${type}`)
+  // axios call goes here
 }
