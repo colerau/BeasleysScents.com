@@ -1,3 +1,3 @@
-export const purchase = (category, scent) => {
-  console.log(`purchasing ${category}, ${scent}`)
+export const purchase = (category, type) => {
+  console.log(`purchasing ${category}, ${type}`)
 }

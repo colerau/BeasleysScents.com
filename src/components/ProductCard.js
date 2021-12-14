@@ -1,9 +1,10 @@
 import React, {useState} from "react"
+import { purchase } from "../actions/purchase.js"
 
 const ProductCard = (props) => {
 
   const handleClick = () => {
-    console.log(`clicked ${props.category} - ${props.type}`)
+    purchase(props.category, props.type)
   }
 
   return(
