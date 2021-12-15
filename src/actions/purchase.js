@@ -7,8 +7,8 @@ export const purchase = (category, type) => {
 
   axios
   .post('http://localhost:3000/checkout', {
-    title: "Hello World!",
-    body: "test"
+    category: category,
+    type: type
   })
   .then((response) => {
     console.log(response)
