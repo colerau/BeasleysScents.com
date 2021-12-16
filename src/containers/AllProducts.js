@@ -26,7 +26,7 @@ import axios from 'axios'
 class AllProducts extends React.PureComponent {
   constructor(props) {
     super(props);
-    this.state = {}
+    this.state = {products: []}
   }
 
   componentDidMount = () => {
@@ -34,8 +34,9 @@ class AllProducts extends React.PureComponent {
     .get('http://localhost:3000/products', {
     })
     .then((response) => {
-      this.setState([...response.data])
-      console.log(this.state)
+      this.setState({
+        products: [...response.data]
+      })
     })
   }
 
@@ -49,6 +50,9 @@ class AllProducts extends React.PureComponent {
         </div>
         <div className="allProductsContainer">
           {/* <Link to="/body-butter" style={{color: "black"}}><ProductCard noPurchaseButton={true} image={lavender} type={"Body Butter"}/></Link> */}
+          {this.state.products.map(product => (
+            <ProductCard category={product.category} />
+          ))}
         </div>
         <Footer />
       </div>
