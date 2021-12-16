@@ -4,7 +4,8 @@ import { purchase } from "../actions/purchase.js"
 const ProductCard = (props) => {
 
   const handleClick = () => {
-    purchase(props.category, props.type)
+    //! Fix this
+    purchase(props.category, props.category)
   }
 
   return(
@@ -12,11 +13,8 @@ const ProductCard = (props) => {
       <div className="productCard">
         <img className={props.orientation === "landscape" ? "productCardImageLandscape" : "productCardImage"} src={props.image} alt="Product"></img>
       </div>
-      <div style={{textAlign: "center"}} className="quicksand productTypeText">
-        {props.type}
-      </div>
-      <div style={{textAlign: "center"}} className="quicksand productTypeText">
-        {props.typeOverflow}
+      <div style={{textAlign: "center"}} className="quicksand productcategoryText">
+        {props.category}
       </div>
 
       {props.noPurchaseButton === true ? <></> : <button id="productCardButton" onClick={handleClick}>Purchase via Square</button>}

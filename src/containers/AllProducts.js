@@ -5,21 +5,55 @@ import Jumbotron from "../components/Jumbotron.js"
 import Navbar from "../components/Navbar.js"
 import Footer from "../components/Footer.js"
 import { Link } from "react-router-dom";
+import axios from 'axios'
 
-const AllProducts = () => {
-  return(
-    <div>
-      <Jumbotron />
-      <Navbar />
-      <div className="header">
-        All Products
+// const AllProducts = () => {
+//   return(
+//     <div>
+//       <Jumbotron />
+//       <Navbar />
+//       <div className="header">
+//         All Products
+//       </div>
+//       <div className="allProductsContainer">
+//         {/* <Link to="/body-butter" style={{color: "black"}}><ProductCard noPurchaseButton={true} image={lavender} type={"Body Butter"}/></Link> */}
+//       </div>
+//       <Footer />
+//     </div>
+//   )
+// }
+
+class AllProducts extends React.PureComponent {
+  constructor(props) {
+    super(props);
+    this.state = {
+      photos: []
+    }
+  }
+
+  componentDidMount = () => {
+    axios
+    .get('http://localhost:3000/products', {
+    })
+    .then((response) => {
+      console.log(response)
+    })
+  }
+
+  render = () => {
+    return(
+      <div>
+        <Jumbotron />
+        <Navbar />
+        <div className="header">
+          All Products
+        </div>
+        <div className="allProductsContainer">
+          {/* <Link to="/body-butter" style={{color: "black"}}><ProductCard noPurchaseButton={true} image={lavender} type={"Body Butter"}/></Link> */}
+        </div>
+        <Footer />
       </div>
-      <div className="allProductsContainer">
-        <Link to="/body-butter" style={{color: "black"}}><ProductCard noPurchaseButton={true} image={lavender} type={"Body Butter"}/></Link>
-      </div>
-      <Footer />
-    </div>
-  )
+    )
+  }
 }
-
 export default AllProducts
