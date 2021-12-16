@@ -26,9 +26,7 @@ import axios from 'axios'
 class AllProducts extends React.PureComponent {
   constructor(props) {
     super(props);
-    this.state = {
-      photos: []
-    }
+    this.state = {}
   }
 
   componentDidMount = () => {
@@ -36,7 +34,8 @@ class AllProducts extends React.PureComponent {
     .get('http://localhost:3000/products', {
     })
     .then((response) => {
-      console.log(response)
+      this.setState([...response.data])
+      console.log(this.state)
     })
   }
 
