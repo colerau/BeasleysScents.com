@@ -11,12 +11,18 @@ const ProductCard = (props) => {
       <div className="productCard">
         <img className={props.orientation === "landscape" ? "productCardImageLandscape" : "productCardImage"} src={props.image} alt="Product"></img>
       </div>
+
+      {/* for AllProducts container*/}
       <div style={{textAlign: "center"}} className="quicksand productcategoryText">
         <strong>{props.category}</strong>
       </div>
+      
+      {props.scent ?
       <div style={{textAlign: "center"}} className="quicksand productcategoryText">
         Scent: <strong>{props.scent}</strong>
-      </div>
+      </div> :
+      <></>}
+
       {props.color ?
       <div style={{textAlign: "center"}} className="quicksand productcategoryText">
         Color: <strong>{props.color}</strong>
