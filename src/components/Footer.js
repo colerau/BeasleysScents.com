@@ -3,7 +3,7 @@ import React, {useState} from "react"
 const Footer = () => {
   return(
     <div className="footer">
-      Email: xxxxxxxxx@xxxxx.com
+      Run into a problem? Please contact us at mistybeasley@beasleyscents.com. 
     </div>
   )
 }

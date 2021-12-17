@@ -1,9 +1,20 @@
 import React, {useState} from "react"
+import axios from "axios"
 
 const ProductCard = (props) => {
 
   const handleClick = () => {
-
+    // send name of product to backend
+    axios.post('http://localhost:3000/add-to-cart', {
+      category: `${props.category}s`,
+      scent: props.scent
+    })
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
   }
 
   return(
@@ -29,7 +40,7 @@ const ProductCard = (props) => {
       </div> :
       <></>}
 
-      {props.noPurchaseButton === true ? <></> : <button id="productCardButton" onClick={handleClick}>Purchase via Square</button>}
+      {props.noPurchaseButton === true ? <></> : <button id="productCardButton" onClick={handleClick}>Add to Cart</button>}
     </div>
   )
 }

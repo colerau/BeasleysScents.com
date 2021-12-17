@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = props => {
   return(
-    <div>
+    <div id="navbarContainer">
       <div className="navbar">
         <Link to="/" style={{color: "black"}}><span>Home</span></Link>
         <span>
@@ -15,6 +15,10 @@ const Navbar = props => {
         <span>
           Instagram
         </span>
+      </div>
+
+      <div id="navbarShoppingCart">
+          My Cart
       </div>
     </div>
   )
