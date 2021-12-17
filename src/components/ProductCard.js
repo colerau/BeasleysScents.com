@@ -1,11 +1,9 @@
 import React, {useState} from "react"
-import { purchase } from "../actions/purchase.js"
 
 const ProductCard = (props) => {
 
   const handleClick = () => {
-    //! Fix this
-    purchase(props.category, props.category)
+
   }
 
   return(
@@ -14,8 +12,16 @@ const ProductCard = (props) => {
         <img className={props.orientation === "landscape" ? "productCardImageLandscape" : "productCardImage"} src={props.image} alt="Product"></img>
       </div>
       <div style={{textAlign: "center"}} className="quicksand productcategoryText">
-        {props.category}
+        <strong>{props.category}</strong>
       </div>
+      <div style={{textAlign: "center"}} className="quicksand productcategoryText">
+        Scent: <strong>{props.scent}</strong>
+      </div>
+      {props.color ?
+      <div style={{textAlign: "center"}} className="quicksand productcategoryText">
+        Color: <strong>{props.color}</strong>
+      </div> :
+      <></>}
 
       {props.noPurchaseButton === true ? <></> : <button id="productCardButton" onClick={handleClick}>Purchase via Square</button>}
     </div>

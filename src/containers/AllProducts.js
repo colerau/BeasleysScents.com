@@ -51,7 +51,7 @@ class AllProducts extends React.PureComponent {
         <div className="allProductsContainer">
           {/* <Link to="/body-butter" style={{color: "black"}}><ProductCard noPurchaseButton={true} image={lavender} type={"Body Butter"}/></Link> */}
           {this.state.products.map(product => (
-            <ProductCard category={product.category} />
+            <ProductCard category={product.category} scent={product.scent} color={product.color} />
           ))}
         </div>
         <Footer />
