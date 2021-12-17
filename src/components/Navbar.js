@@ -18,7 +18,7 @@ const Navbar = props => {
       </div>
 
       <div id="navbarShoppingCart">
-          My Cart
+          <Link to="/shopping-cart" style={{color: "black"}}>My Cart</Link>
       </div>
     </div>
   )

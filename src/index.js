@@ -7,6 +7,7 @@ import { render } from "react-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AllProducts from "./containers/AllProducts.js";
 import BodyButterContainer from "./containers/BodyButterContainer.js";
+import ShoppingCart from "./components/ShoppingCart.js"
 
 ReactDOM.render(
   <React.StrictMode>
@@ -15,6 +16,7 @@ ReactDOM.render(
       <Route path="/" element={<App />} />
       <Route path="all-products" element={<AllProducts />} />
       <Route path="body-butter" element={<BodyButterContainer category="Body Butter"/>} />
+      <Route path="shopping-cart" element={<ShoppingCart />} />
     </Routes>
     </BrowserRouter>
   </React.StrictMode>,
