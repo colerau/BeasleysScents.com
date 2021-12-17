@@ -29,16 +29,16 @@ class AllProducts extends React.PureComponent {
     this.state = {products: []}
   }
 
-  componentDidMount = () => {
-    axios
-    .get('http://localhost:3000/products', {
-    })
-    .then((response) => {
-      this.setState({
-        products: [...response.data]
-      })
-    })
-  }
+  // componentDidMount = () => {
+  //   axios
+  //   .get('http://localhost:3000/products', {
+  //   })
+  //   .then((response) => {
+  //     this.setState({
+  //       products: [...response.data]
+  //     })
+  //   })
+  // }
 
   render = () => {
     return(

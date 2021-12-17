@@ -7,21 +7,21 @@ class ShoppingCart extends React.PureComponent {
     this.state = {products: []}
   }
 
-  componentDidMount = () => {
-    axios
-    .get('http://localhost:3000/show-cart', {
-    })
-    .then((response) => {
-      this.setState({
-        products: [...response.data.cart]
-      })
-    })
-  }
+  // componentDidMount = () => {
+  //   axios
+  //   .get('http://localhost:3000/show-cart', {
+  //   })
+  //   .then((response) => {
+  //     this.setState({
+  //       products: [...response.data.cart]
+  //     })
+  //   })
+  // }
 
   render = () => {
     return(
       <div>
-        {this.state.products.length > 0 ? 
+        {/* {this.state.products.length > 0 ? 
         <div>
           {this.state.products.map(product => <ul><li>{product}</li></ul>)}
         </div>
@@ -29,7 +29,7 @@ class ShoppingCart extends React.PureComponent {
         <div>
           Your cart is empty. 
         </div>
-        }
+        } */}
       </div>
     )
   }
