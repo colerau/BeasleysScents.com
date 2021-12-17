@@ -13,10 +13,10 @@ const ProductCard = (props) => {
       </div>
 
       {/* for AllProducts container*/}
-      <div style={{textAlign: "center"}} className="quicksand productcategoryText">
+      <div style={{textAlign: "center", fontSize: "20px"}} className="quicksand productcategoryText">
         <strong>{props.category}</strong>
       </div>
-      
+
       {props.scent ?
       <div style={{textAlign: "center"}} className="quicksand productcategoryText">
         Scent: <strong>{props.scent}</strong>
