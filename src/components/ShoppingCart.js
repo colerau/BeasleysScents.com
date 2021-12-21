@@ -47,9 +47,9 @@ class ShoppingCart extends React.PureComponent {
     .then(response => response.json())
     .then(data => {
       console.log('Success:', data);
-      // this.setState({
-      //   products: [...data.cart]
-      // })
+      this.setState({
+        products: [...data.cart]
+      })
     })
     .catch((error) => {
       console.error('Error:', error);
