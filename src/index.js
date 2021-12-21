@@ -9,6 +9,8 @@ import AllProducts from "./containers/AllProducts.js";
 import BodyButterContainer from "./containers/BodyButterContainer.js";
 import ShoppingCart from "./components/ShoppingCart.js"
 
+fetch('http://localhost:3000', {credentials: 'include'})
+
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>

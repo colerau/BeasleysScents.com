@@ -1,20 +1,36 @@
 import React, {useState} from "react"
 import axios from "axios"
+import {getCSRFToken} from "../actions/getCSRFToken.js"
+
 
 const ProductCard = (props) => {
 
   const handleClick = () => {
-    // send name of product to backend
-    axios.post('http://localhost:3000/add-to-cart', {
+
+    let data = {
       category: `${props.category}s`,
-      scent: props.scent
+      scent: props.scent 
+    }
+
+    const configObject = {
+      method: "POST",
+      credentials: 'include',
+      headers: {
+          'X-CSRF-Token': getCSRFToken(),
+          'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    }
+
+    fetch('http://localhost:3000/add-to-cart', configObject)
+    .then(response => response.json())
+    .then(data => {
+      console.log('Success:', data);
     })
-    .then(function (response) {
-      console.log(response);
-    })
-    .catch(function (error) {
-      console.log(error);
+    .catch((error) => {
+      console.error('Error:', error);
     });
+
   }
 
   return(
