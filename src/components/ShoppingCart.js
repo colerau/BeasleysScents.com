@@ -1,5 +1,6 @@
 import React from "react"
 import axios from "axios"
+import {getCSRFToken} from "../actions/getCSRFToken.js"
 
 class ShoppingCart extends React.PureComponent {
   constructor(props) {
@@ -28,32 +29,31 @@ class ShoppingCart extends React.PureComponent {
   }
 
   handleRemoveProduct = (product) => {
-
     console.log(product)
+    let data = {
+      category: product.category,
+      scent: product.scent,
+      color: product.color ? product.color : null
+    }
 
-    // let data = {
-    //   category: `${props.category}s`,
-    //   scent: props.scent 
-    // }
+    const configObject = {
+      method: "POST",
+      credentials: 'include',
+      headers: {
+          'X-CSRF-Token': getCSRFToken(),
+          'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    }
 
-    // const configObject = {
-    //   method: "POST",
-    //   credentials: 'include',
-    //   headers: {
-    //       'X-CSRF-Token': getCSRFToken(),
-    //       'Content-Type': 'application/json'
-    //   },
-    //   body: JSON.stringify(data)
-    // }
-
-    // fetch('http://localhost:3000/add-to-cart', configObject)
-    // .then(response => response.json())
-    // .then(data => {
-    //   console.log('Success:', data);
-    // })
-    // .catch((error) => {
-    //   console.error('Error:', error);
-    // });
+    fetch('http://localhost:3000/remove-from-cart', configObject)
+    .then(response => response.json())
+    .then(data => {
+      console.log('Success:', data);
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    });
   }
 
   render = () => {

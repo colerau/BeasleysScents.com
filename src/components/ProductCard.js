@@ -8,7 +8,7 @@ const ProductCard = (props) => {
   const handleClick = () => {
 
     let data = {
-      category: `${props.category}s`,
+      category: props.category,
       scent: props.scent 
     }
 
