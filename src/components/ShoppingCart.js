@@ -27,12 +27,27 @@ class ShoppingCart extends React.PureComponent {
     )
   }
 
+  handleRemoveProduct = () => {
+    console.log("removing product")
+  }
+
   render = () => {
     return(
       <div>
         {this.state.products.length > 0 ? 
         <div>
-          {this.state.products.map((product, key) => <div key={key}>{`${product.category} - ${product.scent}`}</div>)}
+          {this.state.products.map((product, key) =>
+            // putting the key on this div may cause bugs down the line
+            <div id="cartContainer" key={key}>
+              <div>
+                {`${product.category} - ${product.scent}`}
+              </div>
+
+              <div>
+                <button onClick={this.handleRemoveProduct}>X</button>
+              </div>
+            </div>
+          )}
         </div>
         :
         <div>
