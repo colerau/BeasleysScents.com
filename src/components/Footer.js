@@ -3,7 +3,7 @@ import React, {useState} from "react"
 const Footer = () => {
   return(
     <div className="footer">
-      Run into a problem? Please contact us at mistybeasley@beasleyscents.com. 
+      Run into a problem? Contact us at mistybeasley@beasleyscents.com. 
     </div>
   )
 }
