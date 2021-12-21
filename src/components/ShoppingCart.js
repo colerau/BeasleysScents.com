@@ -65,7 +65,9 @@ class ShoppingCart extends React.PureComponent {
             // putting the key on this div may cause bugs down the line
               <div key={key} id="cartContainer">
                 <div>
-                  {`${product.category} - ${product.scent}`}
+                  {product.color ?
+                  `${product.category} - ${product.scent}` :
+                  `${product.category} - ${product.scent}`}
                 </div>
 
                 <div>
