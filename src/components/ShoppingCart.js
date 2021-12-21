@@ -59,13 +59,10 @@ class ShoppingCart extends React.PureComponent {
   handleClearCart = () => {
     fetch('http://localhost:3000/clear-cart', {credentials: 'include'})
     .then(response => response.json())
-    .then(json => 
-      // {
-      // this.setState({
-      // products: [...json]})
-      // }
-      console.log("cart cleared")
-    )
+    .then(json => {
+      console.log(json)
+      this.setState({products: [...json]})
+    })
   }
 
   render = () => {
