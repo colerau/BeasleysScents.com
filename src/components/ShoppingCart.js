@@ -27,34 +27,59 @@ class ShoppingCart extends React.PureComponent {
     )
   }
 
-  handleRemoveProduct = () => {
-    console.log("removing product")
+  handleRemoveProduct = (product) => {
+
+    console.log(product)
+
+    // let data = {
+    //   category: `${props.category}s`,
+    //   scent: props.scent 
+    // }
+
+    // const configObject = {
+    //   method: "POST",
+    //   credentials: 'include',
+    //   headers: {
+    //       'X-CSRF-Token': getCSRFToken(),
+    //       'Content-Type': 'application/json'
+    //   },
+    //   body: JSON.stringify(data)
+    // }
+
+    // fetch('http://localhost:3000/add-to-cart', configObject)
+    // .then(response => response.json())
+    // .then(data => {
+    //   console.log('Success:', data);
+    // })
+    // .catch((error) => {
+    //   console.error('Error:', error);
+    // });
   }
 
   render = () => {
     return(
-      <div>
+      <>
         {this.state.products.length > 0 ? 
-        <div>
-          {this.state.products.map((product, key) =>
+          <div>
+            {this.state.products.map((product, key) =>
             // putting the key on this div may cause bugs down the line
-            <div id="cartContainer" key={key}>
-              <div>
-                {`${product.category} - ${product.scent}`}
-              </div>
+              <div key={key} id="cartContainer">
+                <div>
+                  {`${product.category} - ${product.scent}`}
+                </div>
 
-              <div>
-                <button onClick={this.handleRemoveProduct}>X</button>
+                <div>
+                  &nbsp;<button onClick={() => this.handleRemoveProduct(product)}>X</button>
+                </div>
               </div>
-            </div>
-          )}
-        </div>
+              )}
+          </div>
         :
         <div>
           Your cart is empty. 
         </div>
         }
-      </div>
+    </>
     )
   }
 }
