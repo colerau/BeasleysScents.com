@@ -29,11 +29,8 @@ class ShoppingCart extends React.PureComponent {
   }
 
   handleRemoveProduct = (product) => {
-    console.log(product)
     let data = {
-      category: product.category,
-      scent: product.scent,
-      color: product.color ? product.color : null
+      id: product.id
     }
 
     const configObject = {
@@ -50,10 +47,25 @@ class ShoppingCart extends React.PureComponent {
     .then(response => response.json())
     .then(data => {
       console.log('Success:', data);
+      // this.setState({
+      //   products: [...data.cart]
+      // })
     })
     .catch((error) => {
       console.error('Error:', error);
     });
+  }
+
+  handleClearCart = () => {
+    fetch('http://localhost:3000/clear-cart', {credentials: 'include'})
+    .then(response => response.json())
+    .then(json => 
+      // {
+      // this.setState({
+      // products: [...json]})
+      // }
+      console.log("cart cleared")
+    )
   }
 
   render = () => {
@@ -80,8 +92,13 @@ class ShoppingCart extends React.PureComponent {
         <div>
           Your cart is empty. 
         </div>
+
+     
         }
-    </>
+        <button onClick={this.handleClearCart}>
+          Clear Cart
+        </button>
+      </>
     )
   }
 }
