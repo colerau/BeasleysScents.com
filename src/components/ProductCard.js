@@ -41,18 +41,18 @@ const ProductCard = (props) => {
 
       {/* for AllProducts container*/}
       <div style={{textAlign: "center", fontSize: "20px"}} className="quicksand productcategoryText">
-        <strong>{props.category}</strong>
+        {props.category}
       </div>
 
       {props.scent ?
       <div style={{textAlign: "center"}} className="quicksand productcategoryText">
-        Scent: <strong>{props.scent}</strong>
+        Scent: {props.scent}
       </div> :
       <></>}
 
       {props.color ?
       <div style={{textAlign: "center"}} className="quicksand productcategoryText">
-        Color: <strong>{props.color}</strong>
+        Color: {props.color}
       </div> :
       <></>}
 
