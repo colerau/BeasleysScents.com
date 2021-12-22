@@ -1,6 +1,8 @@
 import React from "react"
 import axios from "axios"
 import {getCSRFToken} from "../actions/getCSRFToken.js"
+import Checkout from "./Checkout.js"
+import { Link } from "react-router-dom";
 
 class ShoppingCart extends React.PureComponent {
   constructor(props) {
@@ -90,11 +92,19 @@ class ShoppingCart extends React.PureComponent {
           Your cart is empty. 
         </div>
 
-     
         }
+
         <button onClick={this.handleClearCart}>
           Clear Cart
         </button>
+
+        <Link 
+          className=""
+          role="button"
+          to="/checkout"
+          > 
+          Checkout
+        </Link>
       </>
     )
   }

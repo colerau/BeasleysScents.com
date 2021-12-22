@@ -8,6 +8,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AllProducts from "./containers/AllProducts.js";
 import BodyButterContainer from "./containers/BodyButterContainer.js";
 import ShoppingCart from "./components/ShoppingCart.js"
+import Checkout from "./components/Checkout.js"
 
 fetch('http://localhost:3000', {credentials: 'include'})
 
@@ -19,6 +20,7 @@ ReactDOM.render(
       <Route path="all-products" element={<AllProducts />} />
       <Route path="body-butter" element={<BodyButterContainer category="Body Butter"/>} />
       <Route path="shopping-cart" element={<ShoppingCart />} />
+      <Route path="checkout" element={<Checkout />} />
     </Routes>
     </BrowserRouter>
   </React.StrictMode>,
