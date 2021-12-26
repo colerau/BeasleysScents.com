@@ -97,7 +97,7 @@ class ProductCard extends React.PureComponent {
         <></>}
   
         {this.props.noPurchaseButton === true ? <></> :
-        <button id="productCardButton" onClick={this.handleClick}>Add to cart</button>}
+        <button id="productCardButton" onClick={this.handleClick}>Add to Cart</button>}
 
       </div>
     )
