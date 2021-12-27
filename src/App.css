@@ -213,14 +213,19 @@ input[name=submit] {
   width: 190px;
 }
 
-#homepageAllProductsButton:hover {
+#homepageAllProductsButton:hover, #productCardButton:hover {
   background-color: #c7fce7;
   color: black;
   outline: none;
   box-shadow: none;
 }
 
-#homepageAllProductsButton:focus, #homepageAllProductsButton:active:focus, #homepageAllProductsButton.active:focus {
+#homepageAllProductsButton:focus, 
+#homepageAllProductsButton:active:focus, 
+#homepageAllProductsButton.active:focus,
+#productCardButton:focus, 
+#productCardButton:active:focus, 
+#productCardButton.active:focus {
   outline: none;
   box-shadow: none;
   background-color: #a4f5d3;

@@ -20,7 +20,10 @@ ReactDOM.render(
       <Route path="/" element={<App />} />
       <Route path="all-products" element={<AllProducts />} />
       <Route path="body-butter" element={<BodyButterContainer category="Body Butter"/>} />
-      <Route path="shopping-cart" element={<ShoppingCart />} />
+
+      {/* Uncomment this when adding back shopping cart feature */}
+      {/* <Route path="shopping-cart" element={<ShoppingCart />} /> */}
+      
       <Route path="checkout" element={<Checkout />} />
     </Routes>
     </BrowserRouter>

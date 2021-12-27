@@ -53,6 +53,10 @@ class ProductCard extends React.PureComponent {
     });
   }
 
+  handleBuyNow = () => {
+    console.log("buying now")
+  }
+
   // toggleAddToCartButton = () => {
   //   let currentProduct
   //   let showAddToCartButton = true
@@ -97,7 +101,7 @@ class ProductCard extends React.PureComponent {
         <></>}
   
         {this.props.noPurchaseButton === true ? <></> :
-        <button id="productCardButton" onClick={this.handleClick}>Add to Cart</button>}
+        <button className="btn btn-outline-dark quicksand" id="productCardButton" onClick={this.handleBuyNow}>Buy Now</button>}
 
       </div>
     )
