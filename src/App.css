@@ -180,3 +180,12 @@
   flex-direction: row;
   justify-content: center;
 }
+
+#addressLineContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+input[name=addressLine1] {
+  font-family: 'Quicksand', sans-serif;
+}

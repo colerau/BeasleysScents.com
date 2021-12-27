@@ -15,7 +15,8 @@ class Checkout extends React.PureComponent {
   }
 
   handleSubmit = (event) => {
-    console.log(event.target.value)
+    event.preventDefault()
+    console.log('')
     // let data = {
 
     // }
@@ -47,34 +48,45 @@ class Checkout extends React.PureComponent {
   render = () => {
     return(
       <form onSubmit={this.handleSubmit}>
-        <label>
-          Address Line 1
-          <input name="addressLine1" value={this.state.addressLine1} onChange={this.handleChange} />
-        </label>
+        
+        <div id="addressLineContainer" className="quicksand">  
+          <div id="addressLine" className="quicksand">
+            Address Line 1
+            <br />
+            <input name="addressLine1" value={this.state.addressLine1} onChange={this.handleChange} />
+          </div>
 
-        <label>
-          Address Line 2
-          <input name="addressLine2" value={this.state.addressLine2} onChange={this.handleChange} />
-        </label>
+          <br />
 
-        <label>
-          City
-          <input name="city" value={this.state.city} onChange={this.handleChange} />
-        </label>
+          <div>
+            Address Line 2
+            <br />
+            <input name="addressLine2" value={this.state.addressLine2} onChange={this.handleChange} />
+          </div>
+        </div>
+    
 
-        <label>
-          State
-          <input name="state" value={this.state.state} onChange={this.handleChange} />
-        </label>
 
-        <label>
-          Postal Code
-          <input name="postalCode" value={this.state.postalCode} onChange={this.handleChange} />
-        </label>
+    
 
-        <label>
-          <input type="submit" value="Submit" />
-        </label>
+      
+        City
+        <input name="city" value={this.state.city} onChange={this.handleChange} />
+    
+
+      
+        State
+        <input name="state" value={this.state.state} onChange={this.handleChange} />
+      
+
+    
+        Postal Code
+        <input name="postalCode" value={this.state.postalCode} onChange={this.handleChange} />
+      
+
+  
+        <input type="submit" value="Submit" />
+       
       </form>
     )
   }
