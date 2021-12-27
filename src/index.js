@@ -9,6 +9,7 @@ import AllProducts from "./containers/AllProducts.js";
 import BodyButterContainer from "./containers/BodyButterContainer.js";
 import ShoppingCart from "./components/ShoppingCart.js"
 import Checkout from "./components/Checkout.js"
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 fetch('http://localhost:3000', {credentials: 'include'})
 

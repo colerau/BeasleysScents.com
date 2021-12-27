@@ -181,11 +181,30 @@
   justify-content: center;
 }
 
-#addressLineContainer {
+#addressContainer {
   display: flex;
   flex-direction: column;
 }
 
-input[name=addressLine1] {
+input[name=addressLine1], input[name=addressLine2] {
   font-family: 'Quicksand', sans-serif;
+  width: 250px;
+}
+
+input[name=city] {
+  font-family: 'Quicksand', sans-serif;
+  width: 220px;
+}
+
+select[name=state] {
+  font-family: 'Quicksand', sans-serif;
+}
+
+input[name=postalCode] {
+  font-family: 'Quicksand', sans-serif;
+  width: 75px;
+}
+
+input[name=submit] {
+  width: 190px;
 }
