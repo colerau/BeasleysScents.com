@@ -212,3 +212,16 @@ input[name=postalCode] {
 input[name=submit] {
   width: 190px;
 }
+
+#homepageAllProductsButton:hover {
+  background-color: #c7fce7;
+  color: black;
+  outline: none;
+  box-shadow: none;
+}
+
+#homepageAllProductsButton:focus, #homepageAllProductsButton:active:focus, #homepageAllProductsButton.active:focus {
+  outline: none;
+  box-shadow: none;
+  background-color: #a4f5d3;
+}

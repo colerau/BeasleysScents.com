@@ -1,5 +1,6 @@
 import React, {useState} from "react"
 import fallCollectionImage from "../photos/homePage/fall-collection.jpg"
+import { Link } from "react-router-dom"
 
 const InfoBoxTop = () => {
   return(
@@ -13,6 +14,16 @@ const InfoBoxTop = () => {
           Hand-crafted &amp; poured
           <div style={{fontSize: "20px"}} className="textCenter">
             Made with fair trade ingredients
+          </div>
+          <div>
+          <Link 
+            className="btn btn-outline-dark"
+            id="homepageAllProductsButton"
+            role="button"
+            to="/all-products"
+            > 
+            View All Products
+          </Link>
           </div>
         </div>
 

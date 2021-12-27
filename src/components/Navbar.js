@@ -17,9 +17,9 @@ const Navbar = props => {
         </span>
       </div>
 
-      <div id="navbarShoppingCart">
+      {/* <div id="navbarShoppingCart">
           <Link to="/shopping-cart" style={{color: "black"}}>My Cart</Link>
-      </div>
+      </div> */}
     </div>
   )
 }
