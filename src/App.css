@@ -230,3 +230,12 @@ input[name=submit] {
   box-shadow: none;
   background-color: #a4f5d3;
 }
+
+#weightContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+/* .rightArrow {
+  font-size: 24px;
+} */

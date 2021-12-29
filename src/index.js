@@ -7,6 +7,7 @@ import { render } from "react-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AllProducts from "./containers/AllProducts.js";
 import BodyButterContainer from "./containers/BodyButterContainer.js";
+import BodyButter4ozContainer from "./containers/BodyButter4ozContainer.js"
 import ShoppingCart from "./components/ShoppingCart.js"
 import Checkout from "./components/Checkout.js"
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -20,10 +21,11 @@ ReactDOM.render(
       <Route path="/" element={<App />} />
       <Route path="all-products" element={<AllProducts />} />
       <Route path="body-butter" element={<BodyButterContainer category="Body Butter"/>} />
+      <Route path="body-butter-4oz" element={<BodyButter4ozContainer category="Body Butter 4oz"/>} />
 
       {/* Uncomment this when adding back shopping cart feature */}
       {/* <Route path="shopping-cart" element={<ShoppingCart />} /> */}
-      
+
       <Route path="checkout" element={<Checkout />} />
     </Routes>
     </BrowserRouter>

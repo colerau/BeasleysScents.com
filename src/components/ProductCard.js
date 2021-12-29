@@ -1,13 +1,15 @@
 import React, {useState} from "react"
 import axios from "axios"
 import {getCSRFToken} from "../actions/getCSRFToken.js"
+// import Button, {glyphicon} from 'react-bootstrap/Button';
 
 class ProductCard extends React.PureComponent {
 
   constructor(props) {
     super(props);
     this.state = {
-      products: []
+      products: [],
+      bodyButterWeight: '4oz'
     }
   }
 
@@ -57,6 +59,10 @@ class ProductCard extends React.PureComponent {
     console.log("buying now")
   }
 
+  handleBodyButterRightArrowClick = () => {
+
+  }
+
   // toggleAddToCartButton = () => {
   //   let currentProduct
   //   let showAddToCartButton = true
@@ -99,6 +105,36 @@ class ProductCard extends React.PureComponent {
           Color: {this.props.color}
         </div> :
         <></>}
+
+        {this.props.isBodyButter &&
+      
+          <>
+            <div className="weightContainer">
+              <div style={{textAlign: "center"}} className="quicksand productcategoryText">
+                Weight: {this.state.bodyButterWeight}
+              </div> 
+            
+              <div>
+                <button onClick={this.handleBodyButterRightArrowClick} style={{textAlign: "center"}}>
+                  {">"}
+                </button>
+              </div>
+            </div>
+        
+            <div>
+              {this.state.bodyButterWeight === "4oz" && 
+              <div style={{textAlign: "center"}} className="quicksand productcategoryText">
+                Price: $20.00
+              </div>} 
+
+              {this.state.bodyButterWeight === "8oz" && 
+              <div style={{textAlign: "center"}} className="quicksand productcategoryText">
+                Price: $35.00
+              </div>} 
+            </div>    
+          </>
+
+        }
   
         {this.props.noPurchaseButton === true ? <></> :
         <button className="btn btn-outline-dark quicksand" id="productCardButton" onClick={this.handleBuyNow}>Buy Now</button>}
