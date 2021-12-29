@@ -9,7 +9,8 @@ class ProductCard extends React.PureComponent {
     super(props);
     this.state = {
       products: [],
-      bodyButterWeight: '4oz'
+      bodyButterWeight: '4oz',
+      bodyButterPrice: '20.00'
     }
   }
 
@@ -60,7 +61,17 @@ class ProductCard extends React.PureComponent {
   }
 
   handleBodyButterRightArrowClick = () => {
+    this.setState({
+      bodyButterWeight: '8oz',
+      bodyButterPrice: '35.00'
+    })
+  }
 
+  handleBodyButterLeftArrowClick = () => {
+    this.setState({
+      bodyButterWeight: '4oz',
+      bodyButterPrice: '20.00'
+    })
   }
 
   // toggleAddToCartButton = () => {
@@ -110,35 +121,50 @@ class ProductCard extends React.PureComponent {
       
           <>
             <div className="weightContainer">
-              <div style={{textAlign: "center"}} className="quicksand productcategoryText">
-                <button className="rightArrowButton" onClick={this.handleBodyButterRightArrowClick} style={{textAlign: "center"}}>
-                  {"<"}
-                </button>
+              {this.state.bodyButterWeight === "4oz" &&            
+                <div style={{textAlign: "center"}} className="quicksand productcategoryText">
+                  <button className="arrowButton" disabled={true} onClick={this.handleBodyButterLeftArrowClick} style={{textAlign: "center"}}>
+                    {"<"}
+                  </button>
 
-                <span style={{padding: "0 5px 0 5px" }}>
-                  Weight: {this.state.bodyButterWeight}
-                </span>
-                
-                <button className="rightArrowButton" onClick={this.handleBodyButterRightArrowClick} style={{textAlign: "center"}}>
-                  {">"}
-                </button>
-              </div> 
-            
-              <div>
-            
-              </div>
+                  <span style={{padding: "0 5px 0 5px" }}>
+                    Weight: {this.state.bodyButterWeight}
+                  </span>
+                  
+                  <button className="arrowButton" onClick={this.handleBodyButterRightArrowClick} style={{textAlign: "center"}}>
+                    {">"}
+                  </button>
+                </div> 
+              }
+              {this.state.bodyButterWeight === "8oz" &&            
+                <div style={{textAlign: "center"}} className="quicksand productcategoryText">
+                  <button className="arrowButton" onClick={this.handleBodyButterLeftArrowClick} style={{textAlign: "center"}}>
+                    {"<"}
+                  </button>
+
+                  <span style={{padding: "0 5px 0 5px" }}>
+                    Weight: {this.state.bodyButterWeight}
+                  </span>
+                  
+                  <button disabled={true} className="arrowButton" onClick={this.handleBodyButterRightArrowClick} style={{textAlign: "center"}}>
+                    {">"}
+                  </button>
+                </div> 
+              }
             </div>
         
             <div>
               {this.state.bodyButterWeight === "4oz" && 
               <div style={{textAlign: "center"}} className="quicksand productcategoryText">
-                Price: $20.00
-              </div>} 
+                Price: ${this.state.bodyButterPrice}
+              </div>
+              } 
 
               {this.state.bodyButterWeight === "8oz" && 
               <div style={{textAlign: "center"}} className="quicksand productcategoryText">
-                Price: $35.00
-              </div>} 
+                Price: ${this.state.bodyButterPrice}
+              </div>
+              } 
             </div>    
           </>
 
