@@ -15,19 +15,29 @@ class Checkout extends React.PureComponent {
       city: '',
       state: '',
       postalCode: '',
-      cartProduct: ''
+      cartProductCategory: '',
+      cartProductScent: '',
+      cartProductColor: '',
+      cartProductBodyButterWeight: '',
+      cartProductBodyButterPrice: '',
+      cartProductPrice: ''
     }
   }
 
   componentDidMount = () => {
     fetch('http://localhost:3000/show-cart', {credentials: 'include'})
     .then(response => response.json())
-    .then(json => console.log(json)
-      // {
-      // this.setState({
-      // cart: [...json]})
-      // }
-    )
+    .then(json => {
+      console.log(json)
+      this.setState({
+        cartProductCategory: json.category,
+        cartProductScent: json.scent
+      })
+      json.color && this.setState({cartProductColor: json.color})
+      json.bodyButterWeight && this.setState({cartProductBodyButterWeight: json.bodyButterWeight})
+      json.bodyButterPrice && this.setState({cartProductBodyButterPrice: json.bodyButterPrice})
+      json.price && this.setState({cartProductPrice: json.price})
+    })
   }
 
   handleSubmit = (event) => {
@@ -136,40 +146,45 @@ class Checkout extends React.PureComponent {
 
             <div id="checkoutProductDetails">
               <div>
-                Product: {this.state.cartProduct.category}
+                Product: {this.state.cartProductCategory}
               </div>
 
               <div>
-                Scent: {this.state.cartProduct.scent}
+                Scent: {this.state.cartProductScent}
               </div>
 
               <div>
-                {this.state.cartProduct.color &&      
+                {this.state.cartProductColor &&      
                 <>
-                  Color: {this.state.cartProduct.color}
+                  Color: {this.state.cartProductColor}
                 </>
                 }
               </div>
 
               <div>
-                {this.state.cartProduct.bodyButterWeight &&      
+                {this.state.cartProductBodyButterWeight &&      
                 <>
-                  Weight: {this.state.cartProduct.bodyButterWeight}
+                  Weight: {this.state.cartProductBodyButterWeight}
                 </>
                 }
               </div>
 
               <div>
-                {this.state.cartProduct.bodyButterPrice &&      
+                {this.state.cartProductBodyButterPrice &&      
                 <>
-                  Price: {this.state.cartProduct.bodyButterPrice}
+                  Price: ${this.state.cartProductBodyButterPrice}
                 </>
                 }
               </div>
 
               <div>
-                Price: {this.state.cartProduct.bodyButterPrice}
+                {this.state.cartProductPrice &&      
+                <>
+                  Price: ${this.state.cartProductPrice}
+                </>
+                }
               </div>
+
             </div>
 
           </div>
