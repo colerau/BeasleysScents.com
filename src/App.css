@@ -152,21 +152,32 @@
 #checkoutContainer {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  font-family: 'Quicksand', sans-serif;
 }
 
 #checkoutForm {
-  display: flex;
-  justify-content: center;
-  width: 50%;
-  margin-left: 200px;
+  /* display: flex;
+  justify-content: center; */
+  /* display: inline-block; */
+  /* width: 50%; */
+  /* margin-left: 200px; */
+  padding-right: 150px;
 }
 
 #cartDetails {
-  width: 50%;
-  display: flex;
-  justify-content: center;
-  margin-right: 200px;
+  /* display: flex;
+  justify-content: center; */
+  /* text-align: center; */
+  /* width: 50%; */
+  /* margin-right: 200px; */
+  padding-left: 150px;
 }
+
+/* #checkoutProductDetails {
+  display: flex;
+  flex-direction: column;
+} */
 
 /* .subHeader {
   font-family: 'Quicksand', sans-serif;
@@ -265,4 +276,9 @@ input[name=submit] {
 
 .arrowButton {
   border: 1px solid black;
+}
+
+#payWithSquareButton {
+  display: flex;
+  justify-content: center;
 }

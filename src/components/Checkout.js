@@ -14,13 +14,25 @@ class Checkout extends React.PureComponent {
       addressLine2: '',
       city: '',
       state: '',
-      postalCode: ''
+      postalCode: '',
+      cartProduct: ''
     }
+  }
+
+  componentDidMount = () => {
+    fetch('http://localhost:3000/show-cart', {credentials: 'include'})
+    .then(response => response.json())
+    .then(json => console.log(json)
+      // {
+      // this.setState({
+      // cart: [...json]})
+      // }
+    )
   }
 
   handleSubmit = (event) => {
     event.preventDefault()
-    console.log('')
+    console.log('in handleSubmit function')
     // let data = {
 
     // }
@@ -51,7 +63,7 @@ class Checkout extends React.PureComponent {
 
   render = () => {
     return(
-      <div>
+      <>
         <Jumbotron />
         <Navbar />
 
@@ -64,63 +76,108 @@ class Checkout extends React.PureComponent {
         </div> */}
 
         <div id="checkoutContainer">
-          <form onSubmit={this.handleSubmit} id="checkoutForm">
-            
-            <div id="addressContainer" className="quicksand">  
-              <div className="quicksand">
-                Address Line 1
-                <br />
-                <input name="addressLine1" value={this.state.addressLine1} onChange={this.handleChange} />
-              </div>
-
-              <br />
-
-              <div>
-                Address Line 2
-                <br />
-                <input name="addressLine2" value={this.state.addressLine2} onChange={this.handleChange} />
-              </div>
-            
-
-              <br />
-
-              <div className="quicksand">
-                City
-                <br />
-                <input name="city" value={this.state.city} onChange={this.handleChange} />
-              </div>
-          
-              <br />
-
-              <div className="quicksand">
-                State
-                <br />
-                <select id="state" name="state" value={this.state.state} onChange={this.handleChange}>
-                  <option value="">---</option><option value="Alabama">Alabama</option><option value="Alaska">Alaska</option><option value="Arizona">Arizona</option><option value="Arkansas">Arkansas</option><option value="California">California</option><option value="Colorado">Colorado</option><option value="Connecticut">Connecticut</option><option value="Delaware">Delaware</option><option value="District of Columbia">District of Columbia</option><option value="Florida">Florida</option><option value="Georgia">Georgia</option><option value="Guam">Guam</option><option value="Hawaii">Hawaii</option><option value="Idaho">Idaho</option><option value="Illinois">Illinois</option><option value="Indiana">Indiana</option><option value="Iowa">Iowa</option><option value="Kansas">Kansas</option><option value="Kentucky">Kentucky</option><option value="Louisiana">Louisiana</option><option value="Maine">Maine</option><option value="Maryland">Maryland</option><option value="Massachusetts">Massachusetts</option><option value="Michigan">Michigan</option><option value="Minnesota">Minnesota</option><option value="Mississippi">Mississippi</option><option value="Missouri">Missouri</option><option value="Montana">Montana</option><option value="Nebraska">Nebraska</option><option value="Nevada">Nevada</option><option value="New Hampshire">New Hampshire</option><option value="New Jersey">New Jersey</option><option value="New Mexico">New Mexico</option><option value="New York">New York</option><option value="North Carolina">North Carolina</option><option value="North Dakota">North Dakota</option><option value="Northern Marianas Islands">Northern Marianas Islands</option><option value="Ohio">Ohio</option><option value="Oklahoma">Oklahoma</option><option value="Oregon">Oregon</option><option value="Pennsylvania">Pennsylvania</option><option value="Puerto Rico">Puerto Rico</option><option value="Rhode Island">Rhode Island</option><option value="South Carolina">South Carolina</option><option value="South Dakota">South Dakota</option><option value="Tennessee">Tennessee</option><option value="Texas">Texas</option><option value="Utah">Utah</option><option value="Vermont">Vermont</option><option value="Virginia">Virginia</option><option value="Virgin Islands">Virgin Islands</option><option value="Washington">Washington</option><option value="West Virginia">West Virginia</option><option value="Wisconsin">Wisconsin</option><option value="Wyoming">Wyoming</option>
-                </select>
-              </div>
-            
-              <br />
-
-              <div className="quicksand">
-                Postal Code
-                <br />
-                <input name="postalCode" value={this.state.postalCode} onChange={this.handleChange} />
-              </div>
-            
-              <br />
-        
+          <div>
+            <form onSubmit={this.handleSubmit}>
               
-              <input className="btn btn-outline-dark" type="submit" value="Checkout with Square" name="submit" />
-            </div>
-          </form>
+              <div id="addressContainer" className="quicksand">  
+                <div className="quicksand">
+                  Address Line 1
+                  <br />
+                  <input name="addressLine1" value={this.state.addressLine1} onChange={this.handleChange} />
+                </div>
+
+                <br />
+
+                <div>
+                  Address Line 2
+                  <br />
+                  <input name="addressLine2" value={this.state.addressLine2} onChange={this.handleChange} />
+                </div>
+              
+
+                <br />
+
+                <div className="quicksand">
+                  City
+                  <br />
+                  <input name="city" value={this.state.city} onChange={this.handleChange} />
+                </div>
+            
+                <br />
+
+                <div className="quicksand">
+                  State
+                  <br />
+                  <select id="state" name="state" value={this.state.state} onChange={this.handleChange}>
+                    <option value="">---</option><option value="Alabama">Alabama</option><option value="Alaska">Alaska</option><option value="Arizona">Arizona</option><option value="Arkansas">Arkansas</option><option value="California">California</option><option value="Colorado">Colorado</option><option value="Connecticut">Connecticut</option><option value="Delaware">Delaware</option><option value="District of Columbia">District of Columbia</option><option value="Florida">Florida</option><option value="Georgia">Georgia</option><option value="Guam">Guam</option><option value="Hawaii">Hawaii</option><option value="Idaho">Idaho</option><option value="Illinois">Illinois</option><option value="Indiana">Indiana</option><option value="Iowa">Iowa</option><option value="Kansas">Kansas</option><option value="Kentucky">Kentucky</option><option value="Louisiana">Louisiana</option><option value="Maine">Maine</option><option value="Maryland">Maryland</option><option value="Massachusetts">Massachusetts</option><option value="Michigan">Michigan</option><option value="Minnesota">Minnesota</option><option value="Mississippi">Mississippi</option><option value="Missouri">Missouri</option><option value="Montana">Montana</option><option value="Nebraska">Nebraska</option><option value="Nevada">Nevada</option><option value="New Hampshire">New Hampshire</option><option value="New Jersey">New Jersey</option><option value="New Mexico">New Mexico</option><option value="New York">New York</option><option value="North Carolina">North Carolina</option><option value="North Dakota">North Dakota</option><option value="Northern Marianas Islands">Northern Marianas Islands</option><option value="Ohio">Ohio</option><option value="Oklahoma">Oklahoma</option><option value="Oregon">Oregon</option><option value="Pennsylvania">Pennsylvania</option><option value="Puerto Rico">Puerto Rico</option><option value="Rhode Island">Rhode Island</option><option value="South Carolina">South Carolina</option><option value="South Dakota">South Dakota</option><option value="Tennessee">Tennessee</option><option value="Texas">Texas</option><option value="Utah">Utah</option><option value="Vermont">Vermont</option><option value="Virginia">Virginia</option><option value="Virgin Islands">Virgin Islands</option><option value="Washington">Washington</option><option value="West Virginia">West Virginia</option><option value="Wisconsin">Wisconsin</option><option value="Wyoming">Wyoming</option>
+                  </select>
+                </div>
+              
+                <br />
+
+                <div className="quicksand">
+                  Postal Code
+                  <br />
+                  <input name="postalCode" value={this.state.postalCode} onChange={this.handleChange} />
+                </div>
+              
+                <br />
+          
+                <div id="payWithSquareButton">
+                  <input className="btn btn-outline-dark" type="submit" value="Pay with Square" name="submit" />
+                </div>
+
+              </div>
+            </form>
+          </div>
 
           <div id="cartDetails">
-            My Cart
+            <div style={{fontSize: "32px"}}>My Cart</div>
+
+            <div id="checkoutProductDetails">
+              <div>
+                Product: {this.state.cartProduct.category}
+              </div>
+
+              <div>
+                Scent: {this.state.cartProduct.scent}
+              </div>
+
+              <div>
+                {this.state.cartProduct.color &&      
+                <>
+                  Color: {this.state.cartProduct.color}
+                </>
+                }
+              </div>
+
+              <div>
+                {this.state.cartProduct.bodyButterWeight &&      
+                <>
+                  Weight: {this.state.cartProduct.bodyButterWeight}
+                </>
+                }
+              </div>
+
+              <div>
+                {this.state.cartProduct.bodyButterPrice &&      
+                <>
+                  Price: {this.state.cartProduct.bodyButterPrice}
+                </>
+                }
+              </div>
+
+              <div>
+                Price: {this.state.cartProduct.bodyButterPrice}
+              </div>
+            </div>
+
           </div>
+
         </div>
+
         <Footer />
-      </div>
+      </>
     )
   }
 }
