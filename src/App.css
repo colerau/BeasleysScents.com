@@ -149,6 +149,33 @@
   text-align: center;
 }
 
+#checkoutContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+#checkoutForm {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  margin-left: 200px;
+}
+
+#cartDetails {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  margin-right: 200px;
+}
+
+/* .subHeader {
+  font-family: 'Quicksand', sans-serif;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-size: 30px;
+  text-align: center;
+} */
+
 #productCardButton {
   width: 100%;
   margin-top: 3px;
