@@ -2,6 +2,8 @@ import React, {useState} from "react"
 import axios from "axios"
 import {getCSRFToken} from "../actions/getCSRFToken.js"
 // import Button, {glyphicon} from 'react-bootstrap/Button';
+import { Link } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 
 class ProductCard extends React.PureComponent {
 
@@ -10,7 +12,8 @@ class ProductCard extends React.PureComponent {
     this.state = {
       products: [],
       bodyButterWeight: '4oz',
-      bodyButterPrice: '20.00'
+      bodyButterPrice: '20.00',
+      redirectToCheckout: null
     }
   }
 
@@ -89,6 +92,7 @@ class ProductCard extends React.PureComponent {
     .then(response => response.json())
     .then(data => {
       console.log('Success:', data)
+      this.setState({redirectToCheckout: "/checkout"})
     })
     .catch((error) => {
       console.error('Error:', error);
@@ -129,6 +133,9 @@ class ProductCard extends React.PureComponent {
   // }
 
   render = () => {
+    if (this.state.redirectToCheckout) {
+      return <Navigate to={this.state.redirectToCheckout} />
+    }
     return(
       <div>
         <div className="productCard">
