@@ -143,46 +143,53 @@ class Checkout extends React.PureComponent {
 
           <div id="cartDetails">
             <div style={{fontSize: "32px"}}>My Cart</div>
-
-            <div id="checkoutProductDetails">
-              <div>
-                Product: <strong>{this.state.cartProductCategory}</strong>
+            
+            <div id="checkoutProductDetailsContainer">
+              <div id="oneX">
+                1 x
               </div>
 
-              <div>
-                Scent: <strong>{this.state.cartProductScent}</strong>
-              </div>
+              <div id="checkoutProductDetails">
+                <div>
+                  Product: <strong>{this.state.cartProductCategory}</strong>
+                </div>
 
-              <div>
-                {this.state.cartProductColor &&      
-                <>
-                  Color: <strong>{this.state.cartProductColor}</strong>
-                </>
-                }
-              </div>
+                <div>
+                  Scent: <strong>{this.state.cartProductScent}</strong>
+                </div>
 
-              <div>
-                {this.state.cartProductBodyButterWeight &&      
-                <>
-                  Weight: <strong>{this.state.cartProductBodyButterWeight}</strong>
-                </>
-                }
-              </div>
+                <div>
+                  {this.state.cartProductColor &&      
+                  <>
+                    Color: <strong>{this.state.cartProductColor}</strong>
+                  </>
+                  }
+                </div>
 
-              <div>
-                {this.state.cartProductBodyButterPrice &&      
-                <>
-                  Price: <strong>${this.state.cartProductBodyButterPrice}</strong>
-                </>
-                }
-              </div>
+                <div>
+                  {this.state.cartProductBodyButterWeight &&      
+                  <>
+                    Weight: <strong>{this.state.cartProductBodyButterWeight}</strong>
+                  </>
+                  }
+                </div>
 
-              <div>
-                {this.state.cartProductPrice &&      
-                <>
-                  Price: <strong>${this.state.cartProductPrice}</strong>
-                </>
-                }
+                <div>
+                  {this.state.cartProductBodyButterPrice &&      
+                  <>
+                    Price: <strong>${this.state.cartProductBodyButterPrice}</strong>
+                  </>
+                  }
+                </div>
+
+                <div>
+                  {this.state.cartProductPrice &&      
+                  <>
+                    Price: <strong>${this.state.cartProductPrice}</strong>
+                  </>
+                  }
+                </div>
+
               </div>
 
             </div>

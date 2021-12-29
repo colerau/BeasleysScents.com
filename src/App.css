@@ -282,3 +282,13 @@ input[name=submit] {
   display: flex;
   justify-content: center;
 }
+
+#checkoutProductDetailsContainer {
+  display: flex;
+}
+
+#oneX {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+}
