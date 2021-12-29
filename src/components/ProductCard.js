@@ -56,8 +56,43 @@ class ProductCard extends React.PureComponent {
     });
   }
 
+  addBodyButterDetailsToDataObject = dataObject => {
+    dataObject["bodyButterWeight"] = this.state.bodyButterWeight
+    dataObject["bodyButterPrice"] = this.state.bodyButterPrice
+    return dataObject
+  }
+
+  createDataObject = () => {
+    let data = {}
+
+    data["category"] = this.props.category
+    data["scent"] = this.props.scent
+    this.props.isBodyButter && this.addBodyButterDetailsToDataObject(data)
+
+    return data
+  }
+
   handleBuyNow = () => {
-    console.log("buying now")
+    let data = this.createDataObject()
+
+    const configObject = {
+      method: "POST",
+      credentials: 'include',
+      headers: {
+          'X-CSRF-Token': getCSRFToken(),
+          'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    }
+
+    fetch('http://localhost:3000/purchase', configObject)
+    .then(response => response.json())
+    .then(data => {
+      console.log('Success:', data)
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    })
   }
 
   handleBodyButterRightArrowClick = () => {
