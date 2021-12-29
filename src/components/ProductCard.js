@@ -111,13 +111,21 @@ class ProductCard extends React.PureComponent {
           <>
             <div className="weightContainer">
               <div style={{textAlign: "center"}} className="quicksand productcategoryText">
-                Weight: {this.state.bodyButterWeight}
+                <button className="rightArrowButton" onClick={this.handleBodyButterRightArrowClick} style={{textAlign: "center"}}>
+                  {"<"}
+                </button>
+
+                <span style={{padding: "0 5px 0 5px" }}>
+                  Weight: {this.state.bodyButterWeight}
+                </span>
+                
+                <button className="rightArrowButton" onClick={this.handleBodyButterRightArrowClick} style={{textAlign: "center"}}>
+                  {">"}
+                </button>
               </div> 
             
               <div>
-                <button onClick={this.handleBodyButterRightArrowClick} style={{textAlign: "center"}}>
-                  {">"}
-                </button>
+            
               </div>
             </div>
         

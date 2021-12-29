@@ -236,6 +236,7 @@ input[name=submit] {
   flex-direction: row;
 }
 
-/* .rightArrow {
-  font-size: 24px;
-} */
+.rightArrowButton {
+  border: 1px solid black;
+  
+}
