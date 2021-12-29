@@ -142,7 +142,7 @@ class Checkout extends React.PureComponent {
           </div>
 
           <div id="cartDetails">
-            <div style={{fontSize: "32px", textAlign: "center", paddingBottom: "11px"}}>My Cart</div>
+            <div style={{fontSize: "32px", textAlign: "center", paddingBottom: "10px"}}>My Cart</div>
             
             <div id="checkoutProductDetailsContainer">
               <div id="oneX">
