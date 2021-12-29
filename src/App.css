@@ -206,7 +206,7 @@ select[name=state] {
 
 input[name=postalCode] {
   font-family: 'Quicksand', sans-serif;
-  width: 75px;
+  width: 95px;
 }
 
 input[name=submit] {
