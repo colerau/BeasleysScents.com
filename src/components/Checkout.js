@@ -146,17 +146,17 @@ class Checkout extends React.PureComponent {
 
             <div id="checkoutProductDetails">
               <div>
-                Product: {this.state.cartProductCategory}
+                Product: <strong>{this.state.cartProductCategory}</strong>
               </div>
 
               <div>
-                Scent: {this.state.cartProductScent}
+                Scent: <strong>{this.state.cartProductScent}</strong>
               </div>
 
               <div>
                 {this.state.cartProductColor &&      
                 <>
-                  Color: {this.state.cartProductColor}
+                  Color: <strong>{this.state.cartProductColor}</strong>
                 </>
                 }
               </div>
@@ -164,7 +164,7 @@ class Checkout extends React.PureComponent {
               <div>
                 {this.state.cartProductBodyButterWeight &&      
                 <>
-                  Weight: {this.state.cartProductBodyButterWeight}
+                  Weight: <strong>{this.state.cartProductBodyButterWeight}</strong>
                 </>
                 }
               </div>
@@ -172,7 +172,7 @@ class Checkout extends React.PureComponent {
               <div>
                 {this.state.cartProductBodyButterPrice &&      
                 <>
-                  Price: ${this.state.cartProductBodyButterPrice}
+                  Price: <strong>${this.state.cartProductBodyButterPrice}</strong>
                 </>
                 }
               </div>
@@ -180,7 +180,7 @@ class Checkout extends React.PureComponent {
               <div>
                 {this.state.cartProductPrice &&      
                 <>
-                  Price: ${this.state.cartProductPrice}
+                  Price: <strong>${this.state.cartProductPrice}</strong>
                 </>
                 }
               </div>
