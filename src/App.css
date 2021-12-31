@@ -228,6 +228,11 @@
   flex-direction: column;
 }
 
+input[name=customerName] {
+  font-family: 'Quicksand', sans-serif;
+  width: 250px;
+}
+
 input[name=addressLine1], input[name=addressLine2] {
   font-family: 'Quicksand', sans-serif;
   width: 250px;

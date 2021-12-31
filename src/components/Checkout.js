@@ -15,6 +15,7 @@ class Checkout extends React.PureComponent {
       city: '',
       state: '',
       postalCode: '',
+      customerName: '',
       cartProductCategory: '',
       cartProductScent: '',
       cartProductColor: '',
@@ -42,7 +43,14 @@ class Checkout extends React.PureComponent {
   handleSubmit = (event) => {
     event.preventDefault()
 
-    let data = this.state
+    let data = {}
+
+    data.customerName = this.state.customerName
+    data.addressLine1 = this.state.addressLine1
+    data.addressLine2 = this.state.addressLine2
+    data.city = this.state.city
+    data.state = this.state.state
+    data.postalCode = this.state.postalCode
 
     const configObject = {
       method: "POST",
@@ -61,6 +69,7 @@ class Checkout extends React.PureComponent {
     })
     .catch((error) => {
       console.error('Error:', error);
+      alert("Could not pay with Square.")
     });
   }
 
@@ -87,6 +96,15 @@ class Checkout extends React.PureComponent {
             <form onSubmit={this.handleSubmit}>
               
               <div id="addressContainer" className="quicksand">  
+
+                <div className="quicksand">
+                  Name
+                  <br />
+                  <input name="customerName" value={this.state.customerName} onChange={this.handleChange} required="required"/>
+                </div>
+
+                <br />
+
                 <div className="quicksand">
                   Address Line 1
                   <br />
