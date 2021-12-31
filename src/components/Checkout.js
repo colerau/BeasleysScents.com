@@ -28,7 +28,6 @@ class Checkout extends React.PureComponent {
     fetch('http://localhost:3000/show-cart', {credentials: 'include'})
     .then(response => response.json())
     .then(json => {
-      console.log(json)
       this.setState({
         cartProductCategory: json.category,
         cartProductScent: json.scent
@@ -42,31 +41,27 @@ class Checkout extends React.PureComponent {
 
   handleSubmit = (event) => {
     event.preventDefault()
-    console.log(this.state)
 
+    let data = this.state
 
-    // let data = {
+    const configObject = {
+      method: "POST",
+      credentials: 'include',
+      headers: {
+          'X-CSRF-Token': getCSRFToken(),
+          'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    }
 
-    // }
-
-    // const configObject = {
-    //   method: "POST",
-    //   credentials: 'include',
-    //   headers: {
-    //       'X-CSRF-Token': getCSRFToken(),
-    //       'Content-Type': 'application/json'
-    //   },
-    //   body: JSON.stringify(data)
-    // }
-
-    // fetch('http://localhost:3000/checkout', configObject)
-    // .then(response => response.json())
-    // .then(data => {
-    //   console.log('Success:', data)
-    // })
-    // .catch((error) => {
-    //   console.error('Error:', error);
-    // });
+    fetch('http://localhost:3000/call-square-api', configObject)
+    .then(response => response.json())
+    .then(data => {
+      console.log('Success:', data);
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    });
   }
 
   handleChange = (event) => {
@@ -137,6 +132,10 @@ class Checkout extends React.PureComponent {
           
                 <div id="payWithSquareButton">
                   <input className="btn btn-outline-dark" type="submit" value="Pay with Square" name="submit" />
+                </div>
+
+                <div style={{fontSize: "12px", textAlign: "center"}}>
+                  Currently only shipping within the U.S.
                 </div>
 
               </div>
