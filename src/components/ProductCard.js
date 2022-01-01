@@ -160,6 +160,12 @@ class ProductCard extends React.PureComponent {
         </div> :
         <></>}
 
+        {this.props.price ?
+        <div style={{textAlign: "center"}} className="quicksand productcategoryText">
+          Price: ${this.props.price}
+        </div> :
+        <></>}
+
         {this.props.isBodyButter &&
       
           <>

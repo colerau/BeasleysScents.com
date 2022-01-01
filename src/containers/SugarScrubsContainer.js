@@ -12,10 +12,10 @@ const SugarScrubsContainer = props => {
       <Jumbotron />
       <Navbar />
       <div className="header">
-        Body Butter
+        Sugar Scrubs
       </div>
       <div className="allProductsContainer">
-        <ProductCard image={roseAndVanilla} category={props.category} scent={"Rose & Vanilla"} orientation="landscape" />
+        <ProductCard image={roseAndVanilla} category={props.category} scent={"Rose & Vanilla"} orientation="landscape" price="15.00" />
       </div>
       <Footer />
     </div>
