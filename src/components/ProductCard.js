@@ -72,6 +72,10 @@ class ProductCard extends React.PureComponent {
     data["category"] = this.props.category
     data["scent"] = this.props.scent
     this.props.isBodyButter && this.addBodyButterDetailsToDataObject(data)
+    if (!this.props.isBodyButter) {
+      data["price"] = this.props.price
+    }
+    
 
     return data
   }
@@ -97,6 +101,7 @@ class ProductCard extends React.PureComponent {
     })
     .catch((error) => {
       console.error('Error:', error);
+      alert("Could not checkout item.")
     })
   }
 
