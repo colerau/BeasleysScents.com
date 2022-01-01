@@ -1,6 +1,7 @@
 import React, {useState} from "react"
 import ProductCard from "../components/ProductCard.js"
 import lavender from "../photos/bodyButter/lavender.JPG"
+import sugarScrubsVariety from "../photos/sugarScrubs/sugarScrubsVariety.JPG"
 import Jumbotron from "../components/Jumbotron.js"
 import Navbar from "../components/Navbar.js"
 import Footer from "../components/Footer.js"
@@ -53,6 +54,8 @@ class AllProducts extends React.PureComponent {
           {/* {this.state.products.map(product => (
             <ProductCard category={product.category} scent={product.scent} color={product.color} />
           ))} */}
+
+        <Link to="/sugar-scrubs" style={{color: "black"}}><ProductCard noPurchaseButton={true} image={sugarScrubsVariety} category={"Sugar Scrubs"} orientation="landscape" /></Link>
 
         </div>
         <Footer />

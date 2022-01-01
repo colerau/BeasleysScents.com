@@ -13,7 +13,8 @@ class ProductCard extends React.PureComponent {
       products: [],
       bodyButterWeight: '4oz',
       bodyButterPrice: '20.00',
-      redirectToCheckout: null
+      redirectToCheckout: null,
+      price: "15.00"
     }
   }
 
