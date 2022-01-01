@@ -4,6 +4,7 @@ import Button from 'react-bootstrap/Button';
 import Jumbotron from "./Jumbotron.js"
 import Navbar from "./Navbar.js"
 import Footer from "./Footer.js"
+import { Navigate } from "react-router-dom";
 
 class Checkout extends React.PureComponent {
 
@@ -65,10 +66,12 @@ class Checkout extends React.PureComponent {
     fetch('http://localhost:3000/call-square-api', configObject)
     .then(response => response.json())
     .then(data => {
-      console.log('Success:', data);
+      console.log('Success:', data.success);
+      // this.setState({redirect: data.success})
+      window.location.href = data.success
     })
     .catch((error) => {
-      console.error('Error:', error);
+      console.error('Error:', data.error);
       alert("Could not pay with Square.")
     });
   }
@@ -78,6 +81,9 @@ class Checkout extends React.PureComponent {
   }
 
   render = () => {
+    // if (this.state.redirect) {
+    //   return <Navigate to={this.state.redirect} />
+    // }
     return(
       <>
         <Jumbotron />
