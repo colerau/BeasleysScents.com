@@ -2,6 +2,7 @@ import React, {useState} from "react"
 import ProductCard from "../components/ProductCard.js"
 import lavender from "../photos/bodyButter/lavender.JPG"
 import sugarScrubsVariety from "../photos/sugarScrubs/sugarScrubsVariety.JPG"
+import bathSaltsVariety from "../photos/bathSalts/bathSaltsVariety.JPG"
 import Jumbotron from "../components/Jumbotron.js"
 import Navbar from "../components/Navbar.js"
 import Footer from "../components/Footer.js"
@@ -56,6 +57,8 @@ class AllProducts extends React.PureComponent {
           ))} */}
 
         <Link to="/sugar-scrubs" style={{color: "black"}}><ProductCard noPurchaseButton={true} image={sugarScrubsVariety} category={"Sugar Scrubs"} orientation="landscape" /></Link>
+
+        <Link to="/bath-salts" style={{color: "black"}}><ProductCard noPurchaseButton={true} image={bathSaltsVariety} category={"Bath Salts"} /></Link>
 
         </div>
         <Footer />

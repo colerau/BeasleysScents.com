@@ -9,6 +9,8 @@ import AllProducts from "./containers/AllProducts.js";
 import BodyButterContainer from "./containers/BodyButterContainer.js";
 import BodyButter4ozContainer from "./containers/BodyButter4ozContainer.js"
 import SugarScrubsContainer from "./containers/SugarScrubsContainer.js"
+import BathSaltsContainer from "./containers/BathSaltsContainer.js"
+import TestPurchaseContainer from "./containers/TestPurchaseContainer.js"
 import ShoppingCart from "./components/ShoppingCart.js"
 import Checkout from "./components/Checkout.js"
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -25,6 +27,14 @@ ReactDOM.render(
       <Route path="body-butter-4oz" element={<BodyButter4ozContainer category="Body Butter 4oz"/>} />
 
       <Route path="sugar-scrubs" element={<SugarScrubsContainer category="Sugar Scrub"/>} />
+
+      <Route path="bath-salts" element={<BathSaltsContainer category="Bath Salts"/>} />
+
+      {/* <Route path="test-purchase" element={<TestPurchaseContainer category="Test Purchase"/>} /> */}
+
+
+
+
 
       {/* Uncomment this when adding back shopping cart feature */}
       {/* <Route path="shopping-cart" element={<ShoppingCart />} /> */}
