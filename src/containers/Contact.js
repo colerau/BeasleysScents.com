@@ -11,6 +11,10 @@ const Contact = props => {
       <div className="header">
         Contact
       </div>
+
+      <div className="quicksand" style={{fontSize: "34px", textAlign: "center"}}>
+        Email: mistybeasley@beasleyscents.com
+      </div>
       <Footer />
     </>
   )

@@ -33,7 +33,7 @@ ReactDOM.render(
 
       {/* <Route path="test-purchase" element={<TestPurchaseContainer category="Test Purchase"/>} /> */}
 
-      <Route path="contact" element={<Contact />} />
+      {/* <Route path="contact" element={<Contact />} /> */}
 
 
 
