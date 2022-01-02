@@ -10,10 +10,10 @@ const Navbar = props => {
           <Link to="/all-products" style={{color: "black"}}>All Products</Link>
         </span>
         <span>
-          Contact
+          <Link to="/contact" style={{color: "black"}}>Contact</Link>
         </span>
         <span>
-          Instagram
+          <a href="https://www.instagram.com/beasleyscents/" style={{color: "black"}}target="_blank" rel="noopener noreferrer">Instagram</a>
         </span>
       </div>
 
