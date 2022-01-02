@@ -253,7 +253,7 @@ input[name=postalCode] {
 }
 
 input[name=submit] {
-  width: 190px;
+  width: 170px;
 }
 
 #homepageAllProductsButton:hover, #productCardButton:hover {
