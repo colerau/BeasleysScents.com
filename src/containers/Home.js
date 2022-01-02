@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React from "react"
 import Jumbotron from "../components/Jumbotron.js"
 import Navbar from "../components/Navbar.js"
 import InfoBoxTop from "../components/InfoBoxTop.js"

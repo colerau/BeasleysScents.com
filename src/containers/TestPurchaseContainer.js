@@ -1,5 +1,4 @@
-import React, {useState} from "react"
-import ProductCard from "../components/ProductCard.js"
+import React from "react"
 import Jumbotron from "../components/Jumbotron.js"
 import Navbar from "../components/Navbar.js"
 import Footer from "../components/Footer.js"
@@ -14,7 +13,7 @@ const TestPurchaseContainer = props => {
         Test Purchase
       </div>
       <div className="allProductsContainer">
-        
+
       </div>
       <Footer />
     </div>

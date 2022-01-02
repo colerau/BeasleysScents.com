@@ -3,16 +3,16 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { render } from "react-dom";
+// import { render } from "react-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AllProducts from "./containers/AllProducts.js";
 import BodyButterContainer from "./containers/BodyButterContainer.js";
 import BodyButter4ozContainer from "./containers/BodyButter4ozContainer.js"
 import SugarScrubsContainer from "./containers/SugarScrubsContainer.js"
 import BathSaltsContainer from "./containers/BathSaltsContainer.js"
-import TestPurchaseContainer from "./containers/TestPurchaseContainer.js"
-import Contact from "./containers/Contact.js"
-import ShoppingCart from "./components/ShoppingCart.js"
+// import TestPurchaseContainer from "./containers/TestPurchaseContainer.js"
+// import Contact from "./containers/Contact.js"
+// import ShoppingCart from "./components/ShoppingCart.js"
 import Checkout from "./components/Checkout.js"
 import 'bootstrap/dist/css/bootstrap.min.css';
 

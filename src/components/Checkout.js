@@ -1,10 +1,8 @@
-import React, {useState} from "react"
+import React from "react"
 import { getCSRFToken } from "../actions/getCSRFToken.js"
-import Button from 'react-bootstrap/Button';
 import Jumbotron from "./Jumbotron.js"
 import Navbar from "./Navbar.js"
 import Footer from "./Footer.js"
-import { Navigate } from "react-router-dom";
 
 class Checkout extends React.PureComponent {
 

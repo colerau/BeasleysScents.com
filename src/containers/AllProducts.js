@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React from "react"
 import ProductCard from "../components/ProductCard.js"
 import lavender from "../photos/bodyButter/lavender.JPG"
 import sugarScrubsVariety from "../photos/sugarScrubs/sugarScrubsVariety.JPG"
@@ -7,7 +7,6 @@ import Jumbotron from "../components/Jumbotron.js"
 import Navbar from "../components/Navbar.js"
 import Footer from "../components/Footer.js"
 import { Link } from "react-router-dom";
-import axios from 'axios'
 
 // const AllProducts = () => {
 //   return(

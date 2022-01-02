@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React from "react"
 import fallCollectionImage from "../photos/homePage/fall-collection.jpg"
 import { Link } from "react-router-dom"
 
