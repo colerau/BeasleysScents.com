@@ -18,7 +18,7 @@ class ShoppingCart extends React.PureComponent {
     //   })
     // })
 
-    fetch('http://localhost:3000/show-cart', {credentials: 'include'})
+    fetch('https://beasleyscents.herokuapp.com/show-cart', {credentials: 'include'})
     .then(response => response.json())
     .then(json => 
       {
@@ -43,7 +43,7 @@ class ShoppingCart extends React.PureComponent {
       body: JSON.stringify(data)
     }
 
-    fetch('http://localhost:3000/remove-from-cart', configObject)
+    fetch('https://beasleyscents.herokuapp.com/remove-from-cart', configObject)
     .then(response => response.json())
     .then(data => {
       console.log('Success:', data);
@@ -57,7 +57,7 @@ class ShoppingCart extends React.PureComponent {
   }
 
   handleClearCart = () => {
-    fetch('http://localhost:3000/clear-cart', {credentials: 'include'})
+    fetch('https://beasleyscents.herokuapp.com/clear-cart', {credentials: 'include'})
     .then(response => response.json())
     .then(json => {
       console.log(json)

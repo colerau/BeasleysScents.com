@@ -25,7 +25,7 @@ class Checkout extends React.PureComponent {
   }
 
   componentDidMount = () => {
-    fetch('http://localhost:3000/show-cart', {credentials: 'include'})
+    fetch('https://beasleyscents.herokuapp.com/show-cart', {credentials: 'include'})
     .then(response => response.json())
     .then(json => {
       this.setState({
@@ -61,7 +61,7 @@ class Checkout extends React.PureComponent {
       body: JSON.stringify(data)
     }
 
-    fetch('http://localhost:3000/call-square-api', configObject)
+    fetch('https://beasleyscents.herokuapp.com/call-square-api', configObject)
     .then(response => response.json())
     .then(data => {
       console.log('Success:', data.success);

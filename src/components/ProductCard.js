@@ -41,7 +41,7 @@ class ProductCard extends React.PureComponent {
       body: JSON.stringify(data)
     }
 
-    fetch('http://localhost:3000/add-to-cart', configObject)
+    fetch('https://beasleyscents.herokuapp.com/add-to-cart', configObject)
     .then(response => response.json())
     .then(data => {
       console.log('Success:', data)
@@ -91,7 +91,7 @@ class ProductCard extends React.PureComponent {
       body: JSON.stringify(data)
     }
 
-    fetch('http://localhost:3000/purchase', configObject)
+    fetch('https://beasleyscents.herokuapp.com/purchase', configObject)
     .then(response => response.json())
     .then(data => {
       console.log('Success:', data)
