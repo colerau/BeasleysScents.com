@@ -1,6 +1,8 @@
 import React from "react"
-import fallCollectionImage from "../photos/homePage/fall-collection.jpg"
+import { Link } from "react-router-dom"
 import mint from "../photos/homePage/mint.JPG"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHeart } from '@fortawesome/free-solid-svg-icons'
 
 const InfoBoxBottom = () => {
   return(
@@ -8,7 +10,12 @@ const InfoBoxBottom = () => {
 
       <div className="infoBoxBottomTextContainer">
         <div style={{fontSize: "38px"}}>
-          All products made with love from our family to yours!
+          <div style={{display: "flex", flexDirection: "column"}}>
+            All products made with love from our family to yours!
+            <div style={{fontSize: "20px", paddingTop: "17px"}}>
+              <FontAwesomeIcon icon={faHeart} />
+            </div>
+          </div>
         </div>
       </div>
 

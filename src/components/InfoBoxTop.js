@@ -15,7 +15,6 @@ const InfoBoxTop = () => {
           <div style={{fontSize: "20px"}} className="textCenter">
             Made with fair trade ingredients
           </div>
-          <div>
           <Link 
             className="btn btn-outline-dark"
             id="homepageAllProductsButton"
@@ -24,10 +23,7 @@ const InfoBoxTop = () => {
             > 
             View All Products
           </Link>
-          </div>
         </div>
-
-   
       </div>
     </div>
   )
