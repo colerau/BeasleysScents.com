@@ -24,7 +24,7 @@ const BathSaltsContainer = props => {
 
       <div className="allProductsContainer">
         <ProductCard image={lavender} category={props.category} scent={"Lavender"} price="8.00" />
-        <ProductCard image={roseAndLavender} category={props.category} scent={"Rose & Lavender"} price="8.00" />
+        <ProductCard image={roseAndLavender} orientation="landscape" category={props.category} scent={"Rose & Lavender"} price="8.00" />
         <ProductCard image={peppermint} category={props.category} scent={"Peppermint"} price="8.00" />
       </div>
       <Footer />
