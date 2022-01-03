@@ -17,7 +17,7 @@ const BodyButterContainer = props => {
       <Jumbotron />
       <Navbar />
       <div className="header">
-        Body Butter
+        Choose Your Body Butter
       </div>
       <div className="allProductsContainer">
         <ProductCard image={lavender} category={props.category} scent={"Lavender"} isBodyButter={true} />

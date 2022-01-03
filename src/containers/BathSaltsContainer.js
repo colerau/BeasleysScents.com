@@ -15,7 +15,7 @@ const BathSaltsContainer = props => {
       <Jumbotron />
       <Navbar />
       <div className="header">
-        Bath Salts
+        Choose Your Bath Salts
       </div>
       <div className="allProductsContainer">
         <ProductCard image={lavender} category={props.category} scent={"Lavender"} price="8.00" />

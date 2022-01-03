@@ -47,7 +47,7 @@ class AllProducts extends React.PureComponent {
         <Jumbotron />
         <Navbar />
         <div className="header">
-          All Products
+          Select a Product
         </div>
         <div className="allProductsContainer">
           <Link to="/body-butter" style={{color: "black"}}><ProductCard noPurchaseButton={true} image={lavender} category={"Body Butter"}/></Link>

@@ -16,7 +16,8 @@ import BathSaltsContainer from "./containers/BathSaltsContainer.js"
 import Checkout from "./components/Checkout.js"
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-fetch('https://beasleyscents.herokuapp.com/', {credentials: 'include'})
+// ! add back
+// fetch('https://beasleyscents.herokuapp.com/', {credentials: 'include'})
 
 ReactDOM.render(
   <React.StrictMode>
