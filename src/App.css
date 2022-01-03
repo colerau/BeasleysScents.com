@@ -92,6 +92,36 @@
   padding-left: 20px;
 }
 
+.infoBoxBottomContainer {
+  display: flex;
+  flex-direction: row;
+  padding-top: 30px;
+}
+
+.infoBoxBottomImageContainer {
+  display: flex;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+  /* padding-right: 100px; */
+}
+
+.infoBoxBottomImage {
+  width: 85%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.infoBoxBottomTextContainer {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: 'Quicksand', sans-serif;
+  padding-left: 20px;
+}
+
 .textCenter {
   text-align: center;
 }
