@@ -222,8 +222,8 @@ class ProductCard extends React.PureComponent {
 
         }
   
-        {this.props.noPurchaseButton === true ? <></> :
-        <button className="btn btn-outline-dark quicksand" id="productCardButton" onClick={this.handleBuyNow}>Buy Now</button>}
+        {/* {this.props.noPurchaseButton === true ? <></> :
+        <button className="btn btn-outline-dark quicksand" id="productCardButton" onClick={this.handleBuyNow}>Buy Now</button>} */}
 
       </div>
     )

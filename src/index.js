@@ -13,7 +13,10 @@ import BathSaltsContainer from "./containers/BathSaltsContainer.js"
 // import TestPurchaseContainer from "./containers/TestPurchaseContainer.js"
 // import Contact from "./containers/Contact.js"
 // import ShoppingCart from "./components/ShoppingCart.js"
-import Checkout from "./components/Checkout.js"
+
+// ! Add back
+// import Checkout from "./components/Checkout.js"
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 // ! add back
@@ -43,7 +46,8 @@ ReactDOM.render(
       {/* Uncomment this when adding back shopping cart feature */}
       {/* <Route path="shopping-cart" element={<ShoppingCart />} /> */}
 
-      <Route path="checkout" element={<Checkout />} />
+      {/* ADD THIS BACK!!! */}
+      {/* <Route path="checkout" element={<Checkout />} /> */}
     </Routes>
     </BrowserRouter>
   </React.StrictMode>,

@@ -17,6 +17,11 @@ const BathSaltsContainer = props => {
       <div className="header">
         Choose Your Bath Salts
       </div>
+
+      <div className="quicksand" style={{textAlign: "center", fontSize: "19px", paddingBottom: "30px"}}>
+        Email Misty Beasley at mistybeasley@beasleyscents.com to order. 
+      </div>
+
       <div className="allProductsContainer">
         <ProductCard image={lavender} category={props.category} scent={"Lavender"} price="8.00" />
         <ProductCard image={roseAndLavender} category={props.category} scent={"Rose & Lavender"} price="8.00" />

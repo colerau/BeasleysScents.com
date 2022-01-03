@@ -19,6 +19,11 @@ const BodyButterContainer = props => {
       <div className="header">
         Choose Your Body Butter
       </div>
+
+      <div className="quicksand" style={{textAlign: "center", fontSize: "19px", paddingBottom: "30px"}}>
+        Email Misty Beasley at mistybeasley@beasleyscents.com to order. 
+      </div>
+
       <div className="allProductsContainer">
         <ProductCard image={lavender} category={props.category} scent={"Lavender"} isBodyButter={true} />
         <ProductCard image={sweetOrangeMango} category={props.category} scent={"Sweet Orange Mango"} typeOverflow={"Mango"} isBodyButter={true} />

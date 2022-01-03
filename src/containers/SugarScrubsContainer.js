@@ -16,9 +16,15 @@ const SugarScrubsContainer = props => {
     <div>
       <Jumbotron />
       <Navbar />
+
       <div className="header">
         Choose a Sugar Scrub
       </div>
+
+      <div className="quicksand" style={{textAlign: "center", fontSize: "19px", paddingBottom: "30px"}}>
+        Email Misty Beasley at mistybeasley@beasleyscents.com to order. 
+      </div>
+      
       <div className="allProductsContainer">
         <ProductCard image={roseAndVanilla} category={props.category} scent={"Rose & Vanilla"} orientation="landscape" price="15.00" />
         <ProductCard image={lemonAndMint} category={props.category} scent={"Lemon & Mint"} orientation="landscape" price="15.00" />
