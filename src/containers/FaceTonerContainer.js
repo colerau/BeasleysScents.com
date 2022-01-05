@@ -53,8 +53,3 @@ const FaceTonerContainer = props => {
 }
 
 export default FaceTonerContainer
-
-
-
-
-

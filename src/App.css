@@ -305,7 +305,7 @@ input[name=submit] {
   width: 170px;
 }
 
-#homepageAllProductsButton:hover, #productCardButton:hover {
+#homepageAllProductsButton:hover, #productCardButton:hover, #homepageInstagramButton:hover {
   background-color: #c7fce7;
   color: black;
   outline: none;
@@ -317,7 +317,10 @@ input[name=submit] {
 #homepageAllProductsButton.active:focus,
 #productCardButton:focus, 
 #productCardButton:active:focus, 
-#productCardButton.active:focus {
+#productCardButton.active:focus,
+#homepageInstagramButton:focus, 
+#homepageInstagramButton:active:focus, 
+#homepageInstagramButton.active:focus {
   outline: none;
   box-shadow: none;
   background-color: #a4f5d3;
@@ -346,3 +349,4 @@ input[name=submit] {
   align-items: center;
   margin-right: 30px;
 }
+

@@ -10,12 +10,13 @@ const InfoBoxBottom = () => {
       <div className="infoBoxBottomTextContainer">
         <div style={{fontSize: "38px"}}>
           <div style={{display: "flex", flexDirection: "column"}}>
-            All products made with love from our family to yours!
-            <div style={{fontSize: "20px", paddingTop: "17px"}}>
-              <FontAwesomeIcon icon={faHeart} />
-            </div>
+            <span>All products made with love from our family to yours! <FontAwesomeIcon icon={faHeart} style={{fontSize: "28px"}}/></span>
           </div>
         </div>
+        <br />
+        <a href="https://www.instagram.com/beasleyscents/" target="_blank" rel="noopener noreferrer" id="homepageInstagramButton" className="btn btn-outline-dark">
+          View our Instagram
+        </a>
       </div>
 
       <div className="infoBoxBottomImageContainer">
