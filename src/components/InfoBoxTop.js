@@ -1,12 +1,23 @@
 import React from "react"
-import fallCollectionImage from "../photos/homePage/fall-collection.jpg"
 import { Link } from "react-router-dom"
+import squareBodyButter from "../photos/homePage/square-body-butter.JPG"
+import sugarScrubsVarietySquare from "../photos/homePage/sugar-scrubs-variety-square.JPG"
+import faceToner from "../photos/homePage/face-toner.JPG"
+import squareScrub from "../photos/homePage/square-scrub.JPG"
 
 const InfoBoxTop = () => {
   return(
     <div className="infoBoxTopContainer">
       <div className="infoBoxTopImageContainer">
-        <img src={fallCollectionImage} alt="" className="infoBoxTopImage"></img>
+        <div id="rowOne">
+          <img src={squareBodyButter} alt="" className="infoBoxTopImage"></img>
+          <img src={sugarScrubsVarietySquare} alt="" className="infoBoxTopImage"></img>
+        </div>
+
+        <div id="rowTwo">
+          <img src={faceToner} alt="" className="infoBoxTopImage"></img>
+          <img src={squareScrub} alt="" className="infoBoxTopImage"></img>
+        </div>
       </div>
 
       <div className="infoBoxTopTextContainer">
