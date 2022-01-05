@@ -17,8 +17,12 @@ const BathBombsContainer = props => {
         Email Misty Beasley at mistybeasley@beasleyscents.com to order. 
       </div>
 
-      <div className="quicksand" style={{fontSize: "34px", textAlign: "center", paddingBottom: "20px"}}>
+      <div className="quicksand" style={{fontSize: "34px", textAlign: "center"}}>
         Scents
+      </div>
+
+      <div className="quicksand" style={{fontSize: "18px", textAlign: "center", paddingBottom: "29px"}}>
+        (Large: $7.00 • Small: $5.00)
       </div>
 
       <div className="quicksand" style={{fontSize: "20px", textAlign: "center"}}>
