@@ -14,6 +14,8 @@ import BubbleCandlesContainer from "./containers/BubbleCandlesContainer.js"
 import BathBombsContainer from "./containers/BathBombsContainer.js"
 import FaceTonerContainer from "./containers/FaceTonerContainer.js"
 import FaceSerumContainer from "./containers/FaceSerumContainer.js"
+import WhippedSaltScrubsContainer from "./containers/WhippedSaltScrubsContainer.js"
+import MoreProducts from "./containers/MoreProducts.js"
 // import TestPurchaseContainer from "./containers/TestPurchaseContainer.js"
 // import Contact from "./containers/Contact.js"
 // import ShoppingCart from "./components/ShoppingCart.js"
@@ -46,6 +48,10 @@ ReactDOM.render(
       <Route path="face-toner" element={<FaceTonerContainer category="Face Toner"/>} />
 
       <Route path="face-serum" element={<FaceSerumContainer category="Face Serum"/>} />
+
+      <Route path="whipped-salt-scrubs" element={<WhippedSaltScrubsContainer category="Whipped Salt Scrub"/>} />
+
+      <Route path="more-products" element={<MoreProducts category="More Products"/>} />
 
       {/* <Route path="test-purchase" element={<TestPurchaseContainer category="Test Purchase"/>} /> */}
 

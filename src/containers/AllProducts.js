@@ -11,6 +11,8 @@ import lowAngle from "../photos/bubbleCandles/low-angle.JPG"
 import bathBombVariety from "../photos/bathBombs/bathBombVariety.JPG"
 import faceToner from "../photos/faceToner/faceToner.JPG"
 import faceSerum from "../photos/faceSerum/faceSerum.JPG"
+import allDifferent from "../photos/whippedSaltScrubs/allDifferent.JPG"
+import lotionBar from "../photos/moreProducts/lotionBar.jpg"
 
 // const AllProducts = () => {
 //   return(
@@ -69,7 +71,11 @@ class AllProducts extends React.PureComponent {
 
         <Link to="/face-toner" style={{color: "black"}}><ProductCard noPurchaseButton={true} image={faceToner} category={"Face Toner"} orientation="landscape" /></Link>
 
-        <Link to="/face-serum" style={{color: "black"}}><ProductCard noPurchaseButton={true} image={faceSerum} category={"Face Serum"} orientation="landscape" /></Link>
+        <Link to="/face-serum" style={{color: "black"}}><ProductCard noPurchaseButton={true} image={faceSerum} category={"Face Serum"} /></Link>
+
+        <Link to="/whipped-salt-scrubs" style={{color: "black"}}><ProductCard noPurchaseButton={true} image={allDifferent} category={"Whipped Salt Scrubs"} orientation="landscape" /></Link>
+
+        <Link to="/more-products" style={{color: "black"}}><ProductCard noPurchaseButton={true} image={lotionBar} category={"More Products"} /></Link>
 
         </div>
         <Footer />
