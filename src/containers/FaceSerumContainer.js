@@ -3,14 +3,14 @@ import Jumbotron from "../components/Jumbotron.js"
 import Navbar from "../components/Navbar.js"
 import Footer from "../components/Footer.js"
 
-const FaceTonerContainer = props => {
+const FaceSerumContainer = props => {
 
   return(
     <div>
       <Jumbotron />
       <Navbar />
       <div className="header">
-        Choose your Face Toner
+        Choose your Face Serum
       </div>
 
       <div className="quicksand" style={{textAlign: "center", fontSize: "19px", paddingBottom: "30px"}}>
@@ -48,9 +48,4 @@ const FaceTonerContainer = props => {
   )
 }
 
-export default FaceTonerContainer
-
-
-
-
-
+export default FaceSerumContainer

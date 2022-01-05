@@ -13,6 +13,7 @@ import BathSaltsContainer from "./containers/BathSaltsContainer.js"
 import BubbleCandlesContainer from "./containers/BubbleCandlesContainer.js"
 import BathBombsContainer from "./containers/BathBombsContainer.js"
 import FaceTonerContainer from "./containers/FaceTonerContainer.js"
+import FaceSerumContainer from "./containers/FaceSerumContainer.js"
 // import TestPurchaseContainer from "./containers/TestPurchaseContainer.js"
 // import Contact from "./containers/Contact.js"
 // import ShoppingCart from "./components/ShoppingCart.js"
@@ -43,6 +44,8 @@ ReactDOM.render(
       <Route path="bath-bombs" element={<BathBombsContainer category="Bath Bomb"/>} />
 
       <Route path="face-toner" element={<FaceTonerContainer category="Face Toner"/>} />
+
+      <Route path="face-serum" element={<FaceSerumContainer category="Face Serum"/>} />
 
       {/* <Route path="test-purchase" element={<TestPurchaseContainer category="Test Purchase"/>} /> */}
 

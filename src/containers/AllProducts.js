@@ -10,6 +10,7 @@ import { Link } from "react-router-dom";
 import lowAngle from "../photos/bubbleCandles/low-angle.JPG"
 import bathBombVariety from "../photos/bathBombs/bathBombVariety.JPG"
 import faceToner from "../photos/faceToner/faceToner.JPG"
+import faceSerum from "../photos/faceSerum/faceSerum.JPG"
 
 // const AllProducts = () => {
 //   return(
@@ -67,6 +68,8 @@ class AllProducts extends React.PureComponent {
         <Link to="/bath-bombs" style={{color: "black"}}><ProductCard noPurchaseButton={true} image={bathBombVariety} category={"Bath Bombs"} orientation="landscape" /></Link>
 
         <Link to="/face-toner" style={{color: "black"}}><ProductCard noPurchaseButton={true} image={faceToner} category={"Face Toner"} orientation="landscape" /></Link>
+
+        <Link to="/face-serum" style={{color: "black"}}><ProductCard noPurchaseButton={true} image={faceSerum} category={"Face Serum"} orientation="landscape" /></Link>
 
         </div>
         <Footer />
