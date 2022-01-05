@@ -8,6 +8,7 @@ import Navbar from "../components/Navbar.js"
 import Footer from "../components/Footer.js"
 import { Link } from "react-router-dom";
 import lowAngle from "../photos/bubbleCandles/low-angle.JPG"
+import bathBombVariety from "../photos/bathBombs/bathBombVariety.JPG"
 
 // const AllProducts = () => {
 //   return(
@@ -61,6 +62,8 @@ class AllProducts extends React.PureComponent {
         <Link to="/bath-salts" style={{color: "black"}}><ProductCard noPurchaseButton={true} image={bathSaltsVariety} category={"Bath Salts"} /></Link>
 
         <Link to="/bubble-candles" style={{color: "black"}}><ProductCard noPurchaseButton={true} image={lowAngle} category={"Bubble Candles"} /></Link>
+
+        <Link to="/bath-bombs" style={{color: "black"}}><ProductCard noPurchaseButton={true} image={bathBombVariety} category={"Bath Bombs"} orientation="landscape" /></Link>
 
         </div>
         <Footer />
