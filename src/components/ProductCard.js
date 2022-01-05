@@ -174,7 +174,7 @@ class ProductCard extends React.PureComponent {
         <></>}
   
         {this.props.color !== "plain" && this.props.isBubbleCandle === true ?
-        <div style={{textAlign: "center", paddingTop: "6px", paddingBottom: "6px"}} className="quicksand productcategoryText">
+        <div style={{textAlign: "center", paddingTop: "8px", paddingBottom: "8px"}} className="quicksand productcategoryText">
           Color: <span style={{backgroundColor: this.props.backgroundColor, padding: "5px 5px 5px 5px", borderRadius: "3px"}}>{this.props.color}</span> or Plain
         </div> :
         <></>}
@@ -276,13 +276,13 @@ class ProductCard extends React.PureComponent {
         
             <div>
               {this.state.bubbleCandleSize === "Small" && 
-              <div style={{textAlign: "center"}} className="quicksand productcategoryText">
+              <div style={{textAlign: "center", paddingTop: "3px"}} className="quicksand productcategoryText">
                 Price: ${this.state.bubbleCandlePrice}
               </div>
               } 
 
               {this.state.bubbleCandleSize === "Large" && 
-              <div style={{textAlign: "center"}} className="quicksand productcategoryText">
+              <div style={{textAlign: "center", paddingTop: "3px"}} className="quicksand productcategoryText">
                 Price: ${this.state.bubbleCandlePrice}
               </div>
               } 
