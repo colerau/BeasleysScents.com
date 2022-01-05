@@ -1,5 +1,4 @@
 import React from "react"
-import ProductCard from "../components/ProductCard.js"
 import Jumbotron from "../components/Jumbotron.js"
 import Navbar from "../components/Navbar.js"
 import Footer from "../components/Footer.js"
@@ -29,7 +28,7 @@ const BathBombsContainer = props => {
       <br />
 
       <div className="quicksand" style={{fontSize: "20px", textAlign: "center"}}>
-        <span style={{backgroundColor: "#ba3c30", padding: "5px 5px 5px 5px", borderRadius: "3px"}}>Rose</span>
+        <span style={{backgroundColor: "#ff6652", padding: "5px 5px 5px 5px", borderRadius: "3px"}}>Grapefruit</span>
       </div>
 
       <br />
@@ -41,7 +40,7 @@ const BathBombsContainer = props => {
       <br />
 
       <div className="quicksand" style={{fontSize: "20px", textAlign: "center"}}>
-        <span style={{backgroundColor: "#ff6652", padding: "5px 5px 5px 5px", borderRadius: "3px"}}>Grapefruit</span>
+        <span style={{backgroundColor: "#ad3434", padding: "5px 5px 5px 5px", borderRadius: "3px"}}>Rose</span>
       </div>
 
       <br />
