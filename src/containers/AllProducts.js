@@ -1,6 +1,6 @@
 import React from "react"
 import ProductCard from "../components/ProductCard.js"
-import lavender from "../photos/bodyButter/lavender.JPG"
+import grapefruitAndOrange from "../photos/bodyButter/grapefruitAndOrange.JPG"
 import sugarScrubsVariety from "../photos/sugarScrubs/sugarScrubsVariety.JPG"
 import bathSaltsVariety from "../photos/bathSalts/bathSaltsVariety.JPG"
 import Jumbotron from "../components/Jumbotron.js"
@@ -51,7 +51,7 @@ class AllProducts extends React.PureComponent {
           Select a Product
         </div>
         <div className="allProductsContainer">
-          <Link to="/body-butter" style={{color: "black"}}><ProductCard noPurchaseButton={true} image={lavender} category={"Body Butter"}/></Link>
+          <Link to="/body-butter" style={{color: "black"}}><ProductCard orientation={"landscape"} noPurchaseButton={true} image={grapefruitAndOrange} category={"Body Butter"}/></Link>
           {/* {this.state.products.map(product => (
             <ProductCard category={product.category} scent={product.scent} color={product.color} />
           ))} */}
