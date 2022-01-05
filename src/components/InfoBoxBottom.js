@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "react-router-dom"
 import mint from "../photos/homePage/mint.JPG"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeart } from '@fortawesome/free-solid-svg-icons'
