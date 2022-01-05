@@ -353,3 +353,27 @@ input[name=submit] {
   margin-right: 30px;
 }
 
+#infoSection {
+  width: 100%;
+  height: 250px;
+  background-color: #e3fced;
+  border-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 85%;
+  border-radius: 12px;
+}
+
+#quoteSection {
+  height: 144px;
+  width: 500px;
+  border-radius: 12px;
+  background-color: white;
+}
+
+#textSection {
+  text-align: center;
+  margin: 0 auto;
+}

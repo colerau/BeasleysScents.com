@@ -32,6 +32,25 @@ const BodyButterContainer = props => {
         <ProductCard image={oatmealCookie} category={props.category} scent={"Oatmeal Cookie"} isBodyButter={true} />
         <ProductCard image={roseAndVanilla} category={props.category} scent={"Rose & Vanilla"} orientation="landscape" isBodyButter={true} />
       </div>
+
+      <br /> <br />
+
+      <div id="infoSection">
+        <div id="quoteSection">
+          <div id="textSection" className="quicksand">
+            <span style={{fontSize: "20px"}}>
+              <strong>"</strong>&nbsp;One of the most important steps in my skin routine is applying moisturizer from head to toe so my skin doesn't dry out.&nbsp;<strong>"</strong>
+            </span>
+       
+      
+            <br /> <br />
+            <span style={{fontSize: "18px"}}>
+              <strong>~</strong> Misty Beasley
+            </span>
+
+          </div>
+        </div>
+      </div>
       <Footer />
     </div>
   )
