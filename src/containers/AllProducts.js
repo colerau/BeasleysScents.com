@@ -61,23 +61,24 @@ class AllProducts extends React.PureComponent {
             <ProductCard category={product.category} scent={product.scent} color={product.color} />
           ))} */}
 
-        <Link to="/sugar-scrubs" style={{color: "black"}}><ProductCard noPurchaseButton={true} image={sugarScrubsVariety} category={"Sugar Scrubs"} orientation="landscape" /></Link>
+          <Link to="/sugar-scrubs" style={{color: "black"}}><ProductCard noPurchaseButton={true} image={sugarScrubsVariety} category={"Sugar Scrubs"} orientation="landscape" /></Link>
 
-        <Link to="/bath-salts" style={{color: "black"}}><ProductCard noPurchaseButton={true} image={bathSaltsVariety} category={"Bath Salts"} /></Link>
+          <Link to="/bath-salts" style={{color: "black"}}><ProductCard noPurchaseButton={true} image={bathSaltsVariety} category={"Bath Salts"} /></Link>
 
-        <Link to="/bubble-candles" style={{color: "black"}}><ProductCard noPurchaseButton={true} image={lowAngle} category={"Bubble Candles"} /></Link>
+          <Link to="/bubble-candles" style={{color: "black"}}><ProductCard noPurchaseButton={true} image={lowAngle} category={"Bubble Candles"} /></Link>
 
-        <Link to="/bath-bombs" style={{color: "black"}}><ProductCard noPurchaseButton={true} image={bathBombVariety} category={"Bath Bombs"} orientation="landscape" /></Link>
+          <Link to="/bath-bombs" style={{color: "black"}}><ProductCard noPurchaseButton={true} image={bathBombVariety} category={"Bath Bombs"} orientation="landscape" /></Link>
 
-        <Link to="/face-toner" style={{color: "black"}}><ProductCard noPurchaseButton={true} image={faceToner} category={"Face Toner"} orientation="landscape" /></Link>
+          <Link to="/face-toner" style={{color: "black"}}><ProductCard noPurchaseButton={true} image={faceToner} category={"Face Toner"} orientation="landscape" /></Link>
 
-        <Link to="/face-serum" style={{color: "black"}}><ProductCard noPurchaseButton={true} image={faceSerum} category={"Face Serum"} /></Link>
+          <Link to="/face-serum" style={{color: "black"}}><ProductCard noPurchaseButton={true} image={faceSerum} category={"Face Serum"} /></Link>
 
-        <Link to="/whipped-salt-scrubs" style={{color: "black"}}><ProductCard noPurchaseButton={true} image={allDifferent} category={"Whipped Salt Scrubs"} orientation="landscape" /></Link>
+          <Link to="/whipped-salt-scrubs" style={{color: "black"}}><ProductCard noPurchaseButton={true} image={allDifferent} category={"Whipped Salt Scrubs"} orientation="landscape" /></Link>
 
-        <Link to="/more-products" style={{color: "black"}}><ProductCard noPurchaseButton={true} image={lotionBar} category={"More Products"} /></Link>
+          <Link to="/more-products" style={{color: "black"}}><ProductCard noPurchaseButton={true} image={lotionBar} category={"More Products"} /></Link>
 
         </div>
+
         <Footer />
       </div>
     )

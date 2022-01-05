@@ -21,7 +21,7 @@ const FaceTonerContainer = props => {
         Scents
       </div>
 
-      <div className="quicksand" style={{fontSize: "18px", textAlign: "center", paddingBottom: "29px"}}>
+      <div className="quicksand" style={{fontSize: "18px", textAlign: "center", paddingBottom: "33px"}}>
         (Price: $15.00)
       </div>
 

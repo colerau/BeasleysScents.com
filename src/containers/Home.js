@@ -19,7 +19,7 @@ const Home = () => {
         <div id="quoteSectionHomePage">
           <div id="textSectionHomePage" className="quicksand">
 
-            <div style={{fontSize: "24px"}}>
+            <div style={{fontSize: "26px"}}>
               My Inspiration
             </div>
 
