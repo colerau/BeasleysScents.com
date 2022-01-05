@@ -9,6 +9,7 @@ import Footer from "../components/Footer.js"
 import { Link } from "react-router-dom";
 import lowAngle from "../photos/bubbleCandles/low-angle.JPG"
 import bathBombVariety from "../photos/bathBombs/bathBombVariety.JPG"
+import faceToner from "../photos/faceToner/faceToner.JPG"
 
 // const AllProducts = () => {
 //   return(
@@ -64,6 +65,8 @@ class AllProducts extends React.PureComponent {
         <Link to="/bubble-candles" style={{color: "black"}}><ProductCard noPurchaseButton={true} image={lowAngle} category={"Bubble Candles"} /></Link>
 
         <Link to="/bath-bombs" style={{color: "black"}}><ProductCard noPurchaseButton={true} image={bathBombVariety} category={"Bath Bombs"} orientation="landscape" /></Link>
+
+        <Link to="/face-toner" style={{color: "black"}}><ProductCard noPurchaseButton={true} image={faceToner} category={"Face Toner"} orientation="landscape" /></Link>
 
         </div>
         <Footer />
