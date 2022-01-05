@@ -173,11 +173,18 @@ class ProductCard extends React.PureComponent {
         </div> :
         <></>}
   
-        {this.props.color !== "plain" && this.props.isBubbleCandle === true ?
+        {this.props.color !== "Plain" && this.props.isBubbleCandle === true ?
         <div style={{textAlign: "center", paddingTop: "8px", paddingBottom: "8px"}} className="quicksand productcategoryText">
           Color: <span style={{backgroundColor: this.props.backgroundColor, padding: "5px 5px 5px 5px", borderRadius: "3px"}}>{this.props.color}</span> or Plain
         </div> :
         <></>}
+
+        {this.props.color === "Plain" && this.props.isBubbleCandle === true ?
+        <div style={{textAlign: "center", paddingTop: "8px", paddingBottom: "8px"}} className="quicksand productcategoryText">
+          Color: {this.props.color}
+        </div> :
+        <></>}
+
 
         {this.props.price ?
         <div style={{textAlign: "center"}} className="quicksand productcategoryText">
