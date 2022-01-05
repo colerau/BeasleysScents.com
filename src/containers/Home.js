@@ -26,7 +26,7 @@ const Home = () => {
             <br />
 
             <div style={{fontSize: "20px"}}>
-              I started this journey because of my family skin history ranging from eczema, psoriasis, and acne. I have always struggled when it came time to purchase the right products for my family and never really had any luck. So, I decided to create all-natural bath and body products to share with my family and others in my community. 
+              <strong>"</strong> I started this journey because of my family skin history ranging from eczema, psoriasis, and acne. I have always struggled when it came time to purchase the right products for my family and never really had any luck. So, I decided to create all-natural bath and body products to share with my family and others in my community.&nbsp;<strong>"</strong> 
             </div>
       
             <br />
