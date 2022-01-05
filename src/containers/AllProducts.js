@@ -7,6 +7,7 @@ import Jumbotron from "../components/Jumbotron.js"
 import Navbar from "../components/Navbar.js"
 import Footer from "../components/Footer.js"
 import { Link } from "react-router-dom";
+import lowAngle from "../photos/bubbleCandles/low-angle.JPG"
 
 // const AllProducts = () => {
 //   return(
@@ -58,6 +59,8 @@ class AllProducts extends React.PureComponent {
         <Link to="/sugar-scrubs" style={{color: "black"}}><ProductCard noPurchaseButton={true} image={sugarScrubsVariety} category={"Sugar Scrubs"} orientation="landscape" /></Link>
 
         <Link to="/bath-salts" style={{color: "black"}}><ProductCard noPurchaseButton={true} image={bathSaltsVariety} category={"Bath Salts"} /></Link>
+
+        <Link to="/bubble-candles" style={{color: "black"}}><ProductCard noPurchaseButton={true} image={lowAngle} category={"Bubble Candles"} /></Link>
 
         </div>
         <Footer />

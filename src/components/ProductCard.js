@@ -11,6 +11,8 @@ class ProductCard extends React.PureComponent {
       products: [],
       bodyButterWeight: '4oz',
       bodyButterPrice: '20.00',
+      bubbleCandleSize: 'Small',
+      bubbleCandlePrice: '10.00',
       redirectToCheckout: null,
       price: "15.00"
     }
@@ -117,6 +119,20 @@ class ProductCard extends React.PureComponent {
     })
   }
 
+  handleBubbleCandleRightArrowClick = () => {
+    this.setState({
+      bubbleCandleSize: 'Large',
+      bubbleCandlePrice: '25.00'
+    })
+  }
+
+  handleBubbleCandleLeftArrowClick = () => {
+    this.setState({
+      bubbleCandleSize: 'Small',
+      bubbleCandlePrice: '10.00'
+    })
+  }
+
   // toggleAddToCartButton = () => {
   //   let currentProduct
   //   let showAddToCartButton = true
@@ -157,9 +173,9 @@ class ProductCard extends React.PureComponent {
         </div> :
         <></>}
   
-        {this.props.color ?
-        <div style={{textAlign: "center"}} className="quicksand productcategoryText">
-          Color: {this.props.color}
+        {this.props.color !== "plain" && this.props.isBubbleCandle === true ?
+        <div style={{textAlign: "center", paddingTop: "6px", paddingBottom: "6px"}} className="quicksand productcategoryText">
+          Color: <span style={{backgroundColor: this.props.backgroundColor, padding: "5px 5px 5px 5px", borderRadius: "3px"}}>{this.props.color}</span> or Plain
         </div> :
         <></>}
 
@@ -215,6 +231,59 @@ class ProductCard extends React.PureComponent {
               {this.state.bodyButterWeight === "8oz" && 
               <div style={{textAlign: "center"}} className="quicksand productcategoryText">
                 Price: ${this.state.bodyButterPrice}
+              </div>
+              } 
+            </div>    
+          </>
+
+        }
+
+        {this.props.isBubbleCandle &&
+          
+          <>
+            <div className="weightContainer">
+              {this.state.bubbleCandleSize === "Small" &&            
+                <div style={{textAlign: "center"}} className="quicksand productcategoryText">
+                  <button className="arrowButton" disabled={true} style={{textAlign: "center"}}>
+                    {"<"}
+                  </button>
+
+                  <span style={{padding: "0 5px 0 5px" }}>
+                    Size: {this.state.bubbleCandleSize}
+                  </span>
+                  
+                  <button className="arrowButton" onClick={this.handleBubbleCandleRightArrowClick} style={{textAlign: "center"}}>
+                    {">"}
+                  </button>
+                </div> 
+              }
+              {this.state.bubbleCandleSize === "Large" &&            
+                <div style={{textAlign: "center"}} className="quicksand productcategoryText">
+                  <button className="arrowButton" onClick={this.handleBubbleCandleLeftArrowClick}style={{textAlign: "center"}}>
+                    {"<"}
+                  </button>
+
+                  <span style={{padding: "0 5px 0 5px" }}>
+                    Size: {this.state.bubbleCandleSize}
+                  </span>
+                  
+                  <button disabled={true} className="arrowButton" style={{textAlign: "center"}}>
+                    {">"}
+                  </button>
+                </div> 
+              }
+            </div>
+        
+            <div>
+              {this.state.bubbleCandleSize === "Small" && 
+              <div style={{textAlign: "center"}} className="quicksand productcategoryText">
+                Price: ${this.state.bubbleCandlePrice}
+              </div>
+              } 
+
+              {this.state.bubbleCandleSize === "Large" && 
+              <div style={{textAlign: "center"}} className="quicksand productcategoryText">
+                Price: ${this.state.bubbleCandlePrice}
               </div>
               } 
             </div>    

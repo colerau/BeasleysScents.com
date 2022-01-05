@@ -155,13 +155,13 @@
 }
 
 .allProductsContainer {
-  border-left: 50px;
-  border-right: 50px;
+  border-left: 150px;
+  border-right: 150px;
   display: flex;
   justify-content: space-around;
   width: 100%;
   flex-wrap: wrap;
-  gap: 114px;
+  gap: 78px;
 }
 
 .productCard {
