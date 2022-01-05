@@ -377,3 +377,28 @@ input[name=submit] {
   text-align: center;
   margin: 0 auto;
 }
+
+#infoSectionHomePage {
+  width: 100%;
+  height: 470px;
+  background-color: #e3fced;
+  border-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 85%;
+  border-radius: 12px;
+}
+
+#quoteSectionHomePage {
+  height: 326px;
+  width: 500px;
+  border-radius: 12px;
+  background-color: white;
+}
+
+#textSectionHomePage {
+  text-align: center;
+  margin: 0 auto;
+}
